@@ -1,0 +1,147 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+.site-header {
+  width: 100%;
+  height: 90px;
+  background: #33212C;
+  border-bottom: 1px solid #BA8C54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  width: 100%;
+  max-width: 1260px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.site-name {
+  font-size: 20px;
+  color: #FFCB6E;
+  font-weight: 400;
+}
+
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  height: 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+  transition: background 0.3s;
+}
+
+.nav-pill:hover {
+  background-color: #BA8C54;
+  color: #fff;
+}
+
+/* Galeria */
+.momentos-especiais {
+  width: 100%;
+  height: 208px;
+  margin-top: 90px;
+  background: linear-gradient(93.84deg, #33212C 30.05%, #21151C 74.41%);
+  border-bottom: 2px solid #BA8C54;
+}
+
+.lirio-png{ 
+  width: 65%;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textos-momentos-especiais{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo-momentos {
+  width: 647px;
+  height: 72px;
+  top: 140px;
+  font-family: 'Great Vibes', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 95px;
+  line-height: 125.02%;
+  color: #BA8C54;
+  text-align: center;
+  margin-top: -180px;
+}
+
+.descricao-momentos {
+  width: 733px;
+  height: 40px;
+  top: 245px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125.02%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 35px;
+}
+
+.espaco-bege {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background: #EBE2D9;
+  border: 2px solid #BA8C54;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
