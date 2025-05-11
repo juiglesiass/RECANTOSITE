@@ -82,7 +82,7 @@ body {
   color: #fff;
 }
 
-/* Galeria */
+/* Momentos Especiais */
 .momentos-especiais {
   width: 100%;
   height: 208px;
@@ -92,11 +92,11 @@ body {
 }
 
 .lirio-png{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
   width: 65%;
   height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .textos-momentos-especiais{
@@ -144,4 +144,27 @@ body {
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+/* Galeria com as Fotos */
+
+.fotos-galeria {
+  position: relative;
+  width: 100%;
+  height: 1559px;
+  background: linear-gradient(180deg, #ECE3DA 0%, #FFE4BD 86.01%), #FFFFFF;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 58px;
+  
+}
+
+.foto {
+  width: 364px;
+  height: 364px;
+  background-size: cover;
+  background-position: center;
+  margin: 0px 10px 10px 10px;
 }
