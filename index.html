@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recanto Lírio dos Vales</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-area">
+        <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo Recanto Lírio dos Vales" class="logo" />
+        <span class="site-name">Recanto Lírio dos Vales</span>
+      </div>
+      <nav class="navigation">
+        <a href="#quem-somos" class="nav-pill">Quem somos</a>
+        <a href="#espaco" class="nav-pill">Espaço</a>
+        <a href="#galeria" class="nav-pill">Galeria</a>
+        <a href="#servicos" class="nav-pill">Serviços</a>
+        <a href="#orcamento" class="nav-pill">Orçamento</a>
+        <a href="#contato" class="nav-pill">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção 1: Hero -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <img src="assets/img/Logo_branco.png" alt="Logo Recanto Lírio dos Vales" class="hero-logo" />
+      <h1 class="hero-title">RECANTO LÍRIO DOS VALES</h1>
+      <p class="hero-text">
+        Todos os adjetivos que você sempre sonhou para transformar a sua celebração em um dia inesquecível você encontra aqui na Recanto Lírio dos Vales. Um lugar encantador e único que une conforto com harmonia e natureza.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção 2: Gastronomia -->
+  <section class="gastronomia-section">
+    <div class="gastronomia-slider">
+      <div class="slide active" style="background-image: url('assets/img/Imagem_gastro.png');"></div>
+      <div class="slide" style="background-image: url('assets/img/slide2.png');"></div>
+      <div class="slide" style="background-image: url('assets/img/slide3.jpg');"></div>
+      <div class="seta seta-next" onclick="nextSlide()"></div>
+      <div class="gastronomia-indicators">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+
+    <div class="gastronomia-content">
+      <h2 class="gastronomia-title">Gastronomia<br>Exclusiva</h2>
+      <p class="gastronomia-text">
+        São 4 opções de cardápio para sua escolha: Massas, Churrasco, Comidinhas e menu do Chef.<br>
+        Comida brasileira e quentinha. Mantemos com atenção os fogareiros bem acesos.
+      </p>
+      <a href="#contato" class="gastronomia-button">Fale Conosco</a>
+    </div>
+  </section>
+
+  <!-- Conteúdo futuro -->
+  <main style="margin-top: 100px;">
+    <section id="quem-somos">
+      <h2>Quem somos</h2>
+      <p>Conteúdo da seção "Quem somos" aqui...</p>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

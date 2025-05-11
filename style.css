@@ -1,0 +1,295 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+.site-header {
+  width: 100%;
+  height: 90px;
+  background: #33212C;
+  border-bottom: 1px solid #BA8C54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  width: 100%;
+  max-width: 1260px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.site-name {
+  font-size: 20px;
+  color: #FFCB6E;
+  font-weight: 400;
+}
+
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  height: 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+  transition: background 0.3s;
+}
+
+.nav-pill:hover {
+  background-color: #BA8C54;
+  color: #fff;
+}
+
+/* Seção 1 - Hero */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 816px;
+  background-color: #000;
+  background-image: 
+    linear-gradient(0deg, rgba(1, 0, 0, 0.6), rgba(1, 0, 0, 0.316)),
+    linear-gradient(180deg, rgba(51, 33, 44, 0.3), rgba(51, 33, 44, 0.3)),
+    url('assets/img/background.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay, normal, normal;
+  box-shadow: inset 110px -45px 42px 95px rgba(0, 0, 0, 0.059);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #BA8C54;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1260px;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 211px;
+  height: 179px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: 86px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #FFECCB 0%, #FFE4BD 26%, #FFFFFF 50%, #FFE4BD 75%, #FFECCB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.hero-text {
+  font-family: 'El Messiri', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.69);
+  max-width: 529px;
+}
+
+/* Seção 2 - Slider */
+.gastronomia-section {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 48.99%, #ECE3DA 49%);
+  border-top: 2px solid #BA8C54;
+  border-bottom: 2px solid #BA8C54;
+  overflow: hidden;
+}
+
+/* Slider (esquerda) */
+.gastronomia-slider {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Setinha */
+.seta {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 39px;
+  height: 39px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+  background-color: #ffffff00;
+  z-index: 2;
+}
+
+.seta::after {
+  content: '➔';
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  color: #000;
+}
+
+/* Bolinhas */
+.gastronomia-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+/* Conteúdo (direita) */
+.gastronomia-content {
+  width: 50%;
+  padding: 94px 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.gastronomia-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 78px;
+  color: #BA8C54;
+}
+
+.gastronomia-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #21151C;
+  line-height: 25px;
+}
+
+.gastronomia-button {
+  display: inline-block;
+  padding: 8px 16px;
+  width: 108px;
+  height: 41px;
+  border: 1px solid #33212C;
+  border-radius: 76px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #33212C;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .gastronomia-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gastronomia-slider,
+  .gastronomia-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .gastronomia-content {
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .gastronomia-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
