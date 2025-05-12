@@ -1,0 +1,237 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* === HEADER COM TRANSIÇÃO === */
+.site-header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2s ease, backdrop-filter 2s ease;
+  backdrop-filter: blur(3px);
+  background-color: rgba(51, 33, 44, 0);
+}
+
+.site-header.scrolled {
+  background-color: rgba(51, 33, 44, 1);
+  backdrop-filter: none;
+}
+
+.site-header .container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.site-name {
+  font-size: 20px;
+  color: #FFCB6E;
+  font-weight: 400;
+}
+
+/* === NAVEGAÇÃO COM HOVER SUAVE E BRILHO === */
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pill {
+  padding: 8px;
+  height: 36px;
+  font-size: 20px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.nav-pill:hover {
+  color: #f6ac52;
+  transform: scale(1.08);
+  text-shadow: 0 0 2px #FFD580, 0 0 15px #FFD580;
+}
+
+
+
+
+
+/* === Bossas Belas Instalacoes === */
+body {
+  background-color: #111; /* apenas para visualização */
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  font-family: 'El Messiri', sans-serif;
+}
+
+.instalacoes {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  top: 0px;
+  background: #21151C;
+  border-bottom: 2px solid #BA8C54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instalacoes h1 {
+  position: absolute;
+  width: 845px;
+  height: 72px;
+  left: 207px;
+  top: 90px;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1.25;
+  color: #BA8C54;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.instalacoes p {
+  position: absolute;
+  width: 526px;
+  height: 38px;
+  top: 200px;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #ecbc68;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* === Espaco Roxo === */
+
+.faixa-decorativa {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 260px;
+  background: #33212C;
+  border: 2px solid #BA8C54;
+}
+
+/* === Fotos e espacoes exlusivos === */
+ body {
+      font-family: 'El Messiri', sans-serif;
+      background: linear-gradient(180deg, #33212C 6.16%, #120A0F 100%);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .imagens-superiores {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .imagens-superiores img {
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .texto-intro {
+      text-align: center;
+      font-size: 18px;
+      color: #FFCB6E;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .espacos-titulo {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .espacos-descricao {
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 350px;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+
+    .espacos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .espaco-card {
+      background: #F7F3EE;
+      color: #33212C;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .espaco-card h3 {
+      font-size: 20px;
+      color: #BA8C54;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .espaco-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .espaco-card img.icone {
+      width: 20px;
+      height: 20px;
+    }

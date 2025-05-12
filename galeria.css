@@ -9,7 +9,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -91,6 +90,7 @@ body {
 
 /* Momentos Especiais */
 .momentos-especiais {
+  position: relative;
   width: 100%;
   height: 308px;
   margin-top: 0px;
@@ -99,9 +99,12 @@ body {
 }
 
 .lirio-momentos{ 
+  position: relative;
   width: 1500px;
   height: 210px;
-  bottom: 0px;
+  bottom: -100px;
+  display: flex;
+  justify-content: center;
 }
 
 .textos-momentos-especiais{
@@ -146,7 +149,7 @@ body {
   width: 100%;
   height: 60px;
   background: #EBE2D9;
-  border: 2px solid #BA8C54;
+  border-top: 2px solid #BA8C54;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -293,12 +296,9 @@ body {
 
 .fa-location-dot {
   font-size: 20px;
-  display: flex;
-  align-items: center;
   cursor: pointer;
   text-decoration: none;
   color: #FFCB6E;
-  z-index: 1;
 }
 
 .botao-rota {
@@ -315,7 +315,9 @@ body {
   font-style: italic;
   font-weight: 600;
   cursor: pointer;
-  padding: 2.5px;
+  padding: 1.5px;
+  text-decoration: none;
+  z-index: 1;
 }
 
 .redes-rodape {
@@ -369,4 +371,8 @@ body {
   text-align: center;
   line-height: 90px;
   z-index: 2;
+}
+
+.teste{
+  z-index: 3;
 }
