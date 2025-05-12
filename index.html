@@ -6,9 +6,7 @@
   <title>Recanto Lírio dos Vales</title>
 
   <!-- Fontes -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,7 +14,8 @@
   <header class="site-header">
     <div class="container">
       <div class="logo-area">
-        <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo Recanto Lírio dos Vales" class="logo" />
+
+        <a href="index.html"><img src="assets/img/Logo_recanto-sem-fundo.png" class="logo"></a>
         <span class="site-name">Recanto Lírio dos Vales</span>
       </div>
       <nav class="navigation">
@@ -43,71 +42,185 @@
   </section>
 
   <!-- Seção 2: Gastronomia -->
-  <section class="gastronomia-nova-section">
-  <div class="gastronomia-nova-content">
-    <img src="assets/img/icon-talheres.png" alt="Ícone Talheres" class="talheres-icon" />
-    <h2 class="gastronomia-nova-title">Gastronomia Exclusiva</h2>
-    <p class="gastronomia-nova-text">
-      São 4 opções de cardápio para sua escolha: Massas, Churrasco, Comidinhas e menu do Chef.<br>
-      Comida brasileira e quentinha. Mantemos com atenção os fogareiros bem acesos.
+  <section class="gastronomia-nova-section animate scroll-delay-1">
+    <div class="gastronomia-nova-content">
+      <img src="assets/img/icon-talheres.png" alt="Ícone Talheres" class="talheres-icon animate scroll-delay-2" />
+      <h2 class="gastronomia-nova-title animate scroll-delay-3">Gastronomia Exclusiva</h2>
+      <p class="gastronomia-nova-text animate scroll-delay-4">
+        São 4 opções de cardápio para sua escolha: Massas, Churrasco, Comidinhas e menu do Chef.<br>
+        Comida brasileira e quentinha. Mantemos com atenção os fogareiros bem acesos.
+      </p>
+      <a href="#contato" class="gastronomia-nova-button animate scroll-delay-5">ACESSE NOSSO CARDÁPIO DOS SONHOS</a>
+    </div>
+  </section>
+
+  <!-- Seção 3: O Espaço -->
+  <section class="espaco-section" id="espaco">
+    <img src="assets/img/lirio-fundo.png" alt="Lírio decorativo" class="espaco-lirio-bg" />
+    <h2 class="espaco-title animate espaco-delay-1">O espaço</h2>
+
+    <p class="espaco-text intro animate espaco-delay-2">
+      Um lugar encantador e com uma atmosfera harmoniosa é o que deseja a maioria dos casais apaixonados.
+      O Recanto Lírio dos Vales está à altura da sua comemoração. Aqui os anfitriões poderão organizar uma linda recepção e acolher com qualidade e requinte os seus convidados.
     </p>
-    <a href="#contato" class="gastronomia-nova-button">ACESSE NOSSO CARDÁPIO DOS SONHOS</a>
+
+    <p class="espaco-text detalhes animate espaco-delay-3">
+      O Recanto possui todos os adjetivos que você sempre sonhou para transformar a sua celebração em um grande dia. O local está cercado por muito verde, lindos jardins e uma linda vista panorâmica para a represa. A área externa espaço para cerimônia, chafariz e cachoeira.
+    </p>
+
+    <div class="espaco-cards">
+      <div class="espaco-card animate espaco-delay-4">
+        <div class="espaco-img animate espaco-delay-5" style="background-image: url('assets/img/passarela_vidro.png');"></div>
+        <h3 class="animate espaco-delay-6">Passarela de Vidro</h3>
+        <p class="animate espaco-delay-7">Passarela de vidro sobre às águas</p>
+        <a href="#" class="animate espaco-delay-7">Mais informações</a>
+      </div>
+      <div class="espaco-card animate espaco-delay-8">
+        <div class="espaco-img animate espaco-delay-9" style="background-image: url('assets/img/discoteca.png');"></div>
+        <h3 class="animate espaco-delay-10">Discoteca</h3>
+        <p class="animate espaco-delay-11">Discoteca Ritmo dos Vales</p>
+        <a href="#" class="animate espaco-delay-11">Mais informações</a>
+      </div>
+      <div class="espaco-card animate espaco-delay-12">
+        <div class="espaco-img animate espaco-delay-13" style="background-image: url('assets/img/salao.png');"></div>
+        <h3 class="animate espaco-delay-14">Salão</h3>
+        <p class="animate espaco-delay-15">Salão principal</p>
+        <a href="#" class="animate espaco-delay-15">Mais informações</a>
+      </div>
+    </div>
+
+    <p class="espaco-footer-text animate espaco-delay-16">Quer conhecer mais? Clique no botão abaixo.</p>
+    <a href="#espaco" class="espaco-footer-btn animate espaco-delay-17">Saiba Mais</a>
+  </section>
+
+<!-- Seção 4: Avaliações -->
+<section class="avaliacoes-section" id="avaliacoes">
+  <div class="avaliacoes-slider">
+    <div class="avaliacao">
+      <div class="stars">★★★★★</div>
+      <p class="texto">Karen - “Vim aqui agradecer ao Sidney e Edilaine, por todo carinho e dedicação...”</p>
+      <p class="data">Se casou em 08/10/2022</p>
+      <div class="autor">
+        <img src="assets/img/karen.png" alt="Karen" />
+        <span>Karen</span>
+      </div>
+    </div>
+    <div class="avaliacao">
+      <div class="stars">★★★★★</div>
+      <p class="texto">Ellen - “O espaço é lindo, une a natureza e a sofisticação na medida certa...”</p>
+      <p class="data">Se casou em 26/11/2022</p>
+      <div class="autor">
+        <img src="assets/img/ellen.png" alt="Ellen" />
+        <span>Ellen</span>
+      </div>
+    </div>
+    <div class="avaliacao">
+      <div class="stars">★★★★☆</div>
+      <p class="texto">Gabriel - “Nosso casamento foi realizado em 17/09/2022, num lugar tão incrível e único...”</p>
+      <p class="data">Se casou em 17/09/2022</p>
+      <div class="autor">
+        <img src="assets/img/gabriel.png" alt="Gabriel" />
+        <span>Gabriel</span>
+      </div>
+    </div>
+    <div class="avaliacao">
+      <div class="stars">★★★★★</div>
+      <p class="texto">Thiago - “Lugar maravilhoso com certeza não temos palavras, foi nossa melhor escolha...”</p>
+      <p class="data">Se casou em 07/01/2023</p>
+      <div class="autor">
+        <img src="assets/img/thiago.png" alt="Thiago" />
+        <span>Thiago</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="avaliacoes-contador">
+    <span class="contador" id="contador">0%</span>
+    <p>Taxa de recomendação dos noivos.</p>
   </div>
 </section>
 
+<!-- Conteúdo futuro -->
+<main style="margin-top: 100px;">
+  <section id="quem-somos">
+    <h2>Quem somos</h2>
+    <p>Conteúdo da seção "Quem somos" aqui...</p>
+  </section>
+</main>
 
-  <!-- Conteúdo futuro -->
-  <main style="margin-top: 100px;">
-    <section id="quem-somos">
-      <h2>Quem somos</h2>
-      <p>Conteúdo da seção "Quem somos" aqui...</p>
-    </section>
-  </main>
-
-  <!-- Scripts -->
-  <script>
-    // Rolagem suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-
-    // Header transparente
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector(".site-header");
-      if (window.scrollY > 10) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
+<!-- Scripts -->
+<script>
+  // Rolagem suave
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
       }
     });
+  });
 
-    // Slider
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
+  // Header transparente
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".site-header");
+    header.classList.toggle("scrolled", window.scrollY > 10);
+  });
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
-      });
-      currentSlide = index;
+  // Scroll reveal
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+  // ANIMAÇÃO CONTADOR
+  function animarContador() {
+    const contador = document.getElementById('contador');
+    if (!contador) return;
+    let valor = 0;
+    const intervalo = setInterval(() => {
+      if (valor <= 100) {
+        contador.textContent = valor + '%';
+        valor++;
+      } else {
+        clearInterval(intervalo);
+      }
+    }, 25);
+  }
+
+  // SLIDER DE AVALIAÇÕES
+  const slider = document.querySelector('.avaliacoes-slider');
+  const avaliacoes = document.querySelectorAll('.avaliacao');
+  let index = 0;
+
+  function passarDepoimentos() {
+    const largura = avaliacoes[0].offsetWidth + 20; // inclui gap
+    index++;
+    if (index < avaliacoes.length) {
+      slider.style.transform = `translateX(-${index * largura}px)`;
+    } else {
+      clearInterval(intervaloSlider);
+      document.body.style.overflow = "auto"; // libera scroll
     }
+  }
 
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
+  let intervaloSlider;
+  const observerAvaliacoes = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animarContador();
+        index = 0;
+        slider.style.transform = `translateX(0px)`;
+        document.body.style.overflow = "hidden"; // trava scroll
+        intervaloSlider = setInterval(passarDepoimentos, 3000); // troca a cada 3s
+      }
+    });
+  }, { threshold: 0.5 });
 
-    function goToSlide(index) {
-      showSlide(index);
-    }
-  </script>
+  observerAvaliacoes.observe(document.querySelector('.avaliacoes-section'));
+</script>
 </body>
 </html>
+
