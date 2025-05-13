@@ -94,54 +94,65 @@
   </section>
 
 <!-- Seção 4: Avaliações -->
-<section class="avaliacoes-section" id="avaliacoes">
-  <div class="avaliacoes-slider">
-    <div class="avaliacao">
-      <div class="stars">★★★★★</div>
-      <p class="texto">Karen - “Vim aqui agradecer ao Sidney e Edilaine, por todo carinho e dedicação...”</p>
-      <p class="data">Se casou em 08/10/2022</p>
-      <div class="autor">
-        <img src="assets/img/karen.png" alt="Karen" />
-        <span>Karen</span>
-      </div>
-    </div>
-    <div class="avaliacao">
-      <div class="stars">★★★★★</div>
-      <p class="texto">Ellen - “O espaço é lindo, une a natureza e a sofisticação na medida certa...”</p>
-      <p class="data">Se casou em 26/11/2022</p>
-      <div class="autor">
-        <img src="assets/img/ellen.png" alt="Ellen" />
-        <span>Ellen</span>
-      </div>
-    </div>
-    <div class="avaliacao">
-      <div class="stars">★★★★☆</div>
-      <p class="texto">Gabriel - “Nosso casamento foi realizado em 17/09/2022, num lugar tão incrível e único...”</p>
-      <p class="data">Se casou em 17/09/2022</p>
-      <div class="autor">
-        <img src="assets/img/gabriel.png" alt="Gabriel" />
-        <span>Gabriel</span>
-      </div>
-    </div>
-    <div class="avaliacao">
-      <div class="stars">★★★★★</div>
-      <p class="texto">Thiago - “Lugar maravilhoso com certeza não temos palavras, foi nossa melhor escolha...”</p>
-      <p class="data">Se casou em 07/01/2023</p>
-      <div class="autor">
-        <img src="assets/img/thiago.png" alt="Thiago" />
-        <span>Thiago</span>
-      </div>
-    </div>
-  </div>
+<section class="avaliacoes" id="avaliacoes">
+    <div class="avaliacoes-container">
+      <div class="depoimentos">
+        <div class="depoimento">
+          <div class="estrelas"></div>
+          <p class="texto">“Vim aqui agradecer ao Sidney e Edilaine, por todo carinho e dedicação...”</p>
+          <p class="data">Se casou em 08/10/2022</p>
+          <div class="autor">
+            <img src="assets/img/karen.png" alt="Karen" />
+            <span>Karen</span>
+          </div>
+        </div>
 
-  <div class="avaliacoes-contador">
-    <span class="contador" id="contador">0%</span>
-    <p>Taxa de recomendação dos noivos.</p>
-  </div>
-</section>
+        <div class="depoimento">
+          <div class="estrelas"></div>
+          <p class="texto">“O espaço é lindo, une a natureza e a sofisticação na medida certa...”</p>
+          <p class="data">Se casou em 26/11/2022</p>
+          <div class="autor">
+            <img src="assets/img/ellen.png" alt="Ellen" />
+            <span>Ellen</span>
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="estrelas"></div>
+          <p class="texto">“Meu casamento foi realizado em 17/09/2022, nesse lugar tão incrivel...”</p>
+          <p class="data">Se casou em 17/09/2022</p>
+          <div class="autor">
+            <img src="assets/img/gabriel.png" alt="Gabriel" />
+            <span>Gabriel</span>
+          </div>
+        </div>
+
+        <div class="depoimento">
+          <div class="estrelas"></div>
+          <p class="texto">“Lugar maravilhoso, com certeza foi nossa melhor escolha...”</p>
+          <p class="data">Se casou em 07/01/2023</p>
+          <div class="autor">
+            <img src="assets/img/thiago.png" alt="Thiago" />
+            <span>Thiago</span>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+      <div class="porcentagem">
+        <h2>100%</h2>
+        <p>Taxa de recomendação dos noivos.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 
 <!-- Conteúdo futuro -->
-<main style="margin-top: 100px;">
+<main style="margin-top: 500px;">
   <section id="quem-somos">
     <h2>Quem somos</h2>
     <p>Conteúdo da seção "Quem somos" aqui...</p>
@@ -167,7 +178,7 @@
     header.classList.toggle("scrolled", window.scrollY > 10);
   });
 
-  // Scroll reveal
+  // Scroll reveal (efeito de fade-in com scroll)
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -175,51 +186,55 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
-  // ANIMAÇÃO CONTADOR
+  // === SEÇÃO DE AVALIAÇÕES ===
+  const avaliacoesSlider = document.querySelector('.avaliacoes-slider');
+  const avaliacoes = document.querySelectorAll('.avaliacao');
+  const contador = document.getElementById('contador');
+
+  let scrollStartY = null;
+  let animado = false;
+
+  // Animação do contador de 0% até 100%
   function animarContador() {
-    const contador = document.getElementById('contador');
-    if (!contador) return;
     let valor = 0;
     const intervalo = setInterval(() => {
-      if (valor <= 100) {
-        contador.textContent = valor + '%';
-        valor++;
-      } else {
+      contador.textContent = valor + '%';
+      if (valor >= 100) {
         clearInterval(intervalo);
       }
+      valor++;
     }, 25);
   }
 
-  // SLIDER DE AVALIAÇÕES
-  const slider = document.querySelector('.avaliacoes-slider');
-  const avaliacoes = document.querySelectorAll('.avaliacao');
-  let index = 0;
-
-  function passarDepoimentos() {
-    const largura = avaliacoes[0].offsetWidth + 20; // inclui gap
-    index++;
-    if (index < avaliacoes.length) {
-      slider.style.transform = `translateX(-${index * largura}px)`;
-    } else {
-      clearInterval(intervaloSlider);
-      document.body.style.overflow = "auto"; // libera scroll
-    }
+  // Mapeia o quanto o usuário rolou e converte para um deslocamento horizontal
+  function mapearScrollParaDeslizamento(scrollDelta) {
+    const maxScroll = 400; // controla quão devagar ou rápido o slider anda
+    const progresso = Math.min(scrollDelta / maxScroll, 1);
+    avaliacoesSlider.style.transform = `translateX(-${progresso * (avaliacoes.length - 1) * 100}vw)`;
   }
 
-  let intervaloSlider;
-  const observerAvaliacoes = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animarContador();
-        index = 0;
-        slider.style.transform = `translateX(0px)`;
-        document.body.style.overflow = "hidden"; // trava scroll
-        intervaloSlider = setInterval(passarDepoimentos, 3000); // troca a cada 3s
-      }
-    });
-  }, { threshold: 0.5 });
+  // Detecta scroll apenas quando a seção está visível
+  window.addEventListener('scroll', () => {
+    const secao = document.querySelector('#avaliacoes');
+    const rect = secao.getBoundingClientRect();
+    const start = window.innerHeight * 0.7;
 
-  observerAvaliacoes.observe(document.querySelector('.avaliacoes-section'));
+    if (rect.top < start && rect.bottom > 0) {
+      if (!animado) {
+        animado = true;
+        animarContador();
+      }
+
+      if (scrollStartY === null) {
+        scrollStartY = window.scrollY;
+      }
+
+      const scrollDelta = window.scrollY - scrollStartY;
+      mapearScrollParaDeslizamento(scrollDelta);
+    } else {
+      scrollStartY = null;
+    }
+  });
 </script>
 </body>
 </html>

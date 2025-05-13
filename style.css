@@ -331,120 +331,113 @@ body {
 }
 
 /* === SEÇÃO 4: AVALIAÇÕES === */
-.avaliacoes-section {
+.avaliacoes {
   position: relative;
+  height: 297px;
   background: linear-gradient(180deg, #33212C 0%, #21151C 100%);
-  border-top: 2px solid #BA8C54;
-  border-bottom: 2px solid #BA8C54;
+  border: 1px solid #BA8C54;
   overflow: hidden;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.avaliacoes-slider {
-  display: flex;
-  width: 400%;
-  transition: transform 1s ease;
+.avaliacoes-container {
+  width: 1260px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
 }
 
-.avaliacao {
-  width: 100vw;
-  padding: 40px;
-  box-sizing: border-box;
+.depoimentos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 30px;
+  height: 100%;
+}
+
+.depoimento {
+  position: relative;
+  width: 320.88px;
+  height: 151.67px;
+  background: transparent;
   color: #FFCB6E;
-  font-family: 'Cormorant Garamond', serif;
-  flex-shrink: 0;
 }
 
-.avaliacao .stars {
-  font-size: 24px;
-  margin-bottom: 10px;
+.estrelas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 8px;
 }
 
-.avaliacao .texto {
+.estrelas::before {
+  content: "★★★★★";
+  color: #FFCB6E;
+  font-size: 28px;
+}
+
+.texto {
+  position: absolute;
+  top: 45px;
+  left: 3px;
+  width: 282.88px;
+  font-weight: 500;
   font-size: 16px;
-  margin-bottom: 5px;
+  line-height: 20px;
+  color: #FFCB6E;
 }
 
-.avaliacao .data {
-  font-size: 18px;
+.data {
+  position: absolute;
+  top: 80px;
+  left: 3px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
   color: #FFE4BD;
   text-decoration: underline;
-  margin-bottom: 5px;
 }
 
-.avaliacao .autor {
+.autor {
+  position: absolute;
+  top: 115px;
+  left: 3px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 5px;
+  gap: 8px;
+  color: #FFE4BD;
+  font-size: 15px;
+  font-weight: 300;
 }
 
-.avaliacao .autor img {
-  width: 24px;
-  height: 24px;
+.autor img {
+  width: 26.51px;
+  height: 24.88px;
   border-radius: 50%;
 }
 
-.avaliacoes-contador {
+.porcentagem {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.avaliacoes-contador .contador {
-  font-size: 64px;
-  font-weight: bold;
+.porcentagem h2 {
   color: #BA8C54;
-  font-family: 'Cormorant Garamond', serif;
-  display: block;
+  font-size: 96px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 120px;
 }
 
-.avaliacoes-contador p {
-  font-size: 24px;
-  color: #fff;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-/* === CONTADOR ANIMADO === */
-.avaliacoes-contador .contador[data-valor]::after {
-  content: "%";
-}
-
-.avaliacoes-section.contador-ativo .contador {
-  animation: contarAteCem 3s ease forwards;
-}
-
-@keyframes contarAteCem {
-  0% {
-    content: "0%";
-  }
-  100% {
-    content: "100%";
-  }
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .avaliacoes-section {
-    height: auto;
-    padding: 40px 0;
-  }
-
-  .avaliacao {
-    padding: 20px;
-    font-size: 14px;
-  }
-
-  .avaliacoes-contador .contador {
-    font-size: 48px;
-  }
-
-  .avaliacoes-contador p {
-    font-size: 20px;
-  }
+.porcentagem p {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
 }
 
 /* === ANIMAÇÕES === */
