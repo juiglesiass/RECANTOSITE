@@ -463,10 +463,10 @@ body {
   left: -210px;
   width: 1464px;
   height: 975px;
-  background-image: url('assets/Casamento M&V-208.jpg');
+  background-image: url('assets/img/background3.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.07;
+  opacity: 0.02;
   z-index: 0;
 }
 
@@ -485,6 +485,7 @@ body {
 .titulo-script {
   font-family: 'Great Vibes', cursive;
   font-size: 96px;
+  font-weight: 1;
   line-height: 0.8;
   margin-bottom: 20px;
   animation: fadeInUp 1s ease forwards;
