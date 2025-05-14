@@ -35,17 +35,21 @@ function goToSlide(index) {
 gsap.registerPlugin(ScrollTrigger);
 
 const depoimentos = document.querySelector('.depoimentos');
+const quantidadeDepoimentos = document.querySelectorAll('.depoimento').length;
+const larguraDepoimento = 320.88 + 30; // largura + gap
 
-gsap.fromTo(depoimentos, 
-  { x: 0 }, 
-  {
-    x: -480, // valor ajustável dependendo da quantidade de depoimentos
-    scrollTrigger: {
-      trigger: "#avaliacoes",
-      start: "top 70%",
-      end: "bottom top",
-      scrub: 2,
-    },
-    ease: "power2.out"
+const deslocamentoTotal = larguraDepoimento * (quantidadeDepoimentos - 1);
+
+gsap.to(depoimentos, {
+  x: -deslocamentoTotal,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#avaliacoes",
+    start: "center center",
+    end: `+=${deslocamentoTotal}`,
+    scrub: 1.5,
+    pin: true,
+    anticipatePin: 1,
   }
-);
+});
+

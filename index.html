@@ -141,7 +141,7 @@
 
       </div>
       <div class="porcentagem">
-        <h2>100%</h2>
+        <h2 id="contador">0%</h2>
         <p>Taxa de recomendação dos noivos.</p>
       </div>
     </div>
@@ -150,6 +150,33 @@
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
+
+<!-- Seção 5: Solicite uma Proposta -->
+
+ <section id="contato-proposta" class="contato-proposta-section">
+  <div class="background-overlay"></div>
+
+  <div class="conteudo-contato">
+    <div class="esquerda">
+      <h2 class="titulo-script">Solicite uma proposta!</h2>
+      <p class="subtitulo">Entre em Contato Conosco</p>
+      <a href="#orcamento" class="botao-contato">Solicite Seu Orçamento</a>
+    </div>
+
+    <div class="direita">
+      <h3 class="redes-titulo">Nos conheça em todas as redes!</h3>
+      <p class="redes-subtitulo">Um outro lado.</p>
+
+      <ul class="lista-contato">
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+5511998747925">Telefone: (11) 99874-7925</a></li>
+        <li><i class="fa-brands fa-facebook"></i> <a href="#">Facebook - Recanto Lírio dos Vales</a></li>
+        <li><i class="fa-brands fa-instagram"></i> <a href="#">Instagram - recantoliriodosvales_</a></li>
+        <li><i class="fa-solid fa-map-pin"></i> <a href="#">Localização - Estrada Nova Ipê, 1028, Diadema – SP</a></li>
+        <li><i class="fa-solid fa-lock"></i> <a href="#">Política de Privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!-- Conteúdo futuro -->
 <main style="margin-top: 500px;">
@@ -195,16 +222,27 @@
   let animado = false;
 
   // Animação do contador de 0% até 100%
-  function animarContador() {
-    let valor = 0;
-    const intervalo = setInterval(() => {
-      contador.textContent = valor + '%';
-      if (valor >= 100) {
-        clearInterval(intervalo);
-      }
-      valor++;
-    }, 25);
+ function animarContador() {
+  const inicio = performance.now();
+  const duracao = 4000; // duração em ms
+  const valorFinal = 100;
+
+  contador.style.opacity = 1; // ativa fade-in
+
+  function atualizarContador(timestamp) {
+    const progresso = Math.min((timestamp - inicio) / duracao, 1);
+    const valorAtual = Math.floor(progresso * valorFinal);
+    contador.textContent = valorAtual + '%';
+
+    if (progresso < 1) {
+      requestAnimationFrame(atualizarContador);
+    } else {
+      contador.textContent = '100%'; // segurança no final
+    }
   }
+
+  requestAnimationFrame(atualizarContador);
+}
 
   // Mapeia o quanto o usuário rolou e converte para um deslocamento horizontal
   function mapearScrollParaDeslizamento(scrollDelta) {
