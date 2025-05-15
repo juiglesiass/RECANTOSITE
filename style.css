@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  background-color:#21151C;
+  background-color:#33212C;
   line-height: 1.6;
 }
 
@@ -28,6 +28,10 @@ body {
     color 0.3s ease,
     transform 0.3s ease,
     text-shadow 0.3s ease;
+}
+
+.pin-spacer{
+  background: linear-gradient(#33212C 40%, #21151C 100% ) ;
 }
 
 .nav-pill:hover {
