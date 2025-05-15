@@ -95,16 +95,20 @@ body {
   height: 308px;
   margin-top: 0px;
   background: linear-gradient(93.84deg, #33212C 30.05%, #21151C 74.41%);
-  border-bottom: 2px solid #BA8C54;
+  border-bottom: 5px solid #BA8C54;
+}
+
+.fundo-momentos{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .lirio-momentos{ 
   position: relative;
   width: 1500px;
   height: 210px;
-  bottom: -100px;
-  display: flex;
-  justify-content: center;
+  top: 90px;
 }
 
 .textos-momentos-especiais{
