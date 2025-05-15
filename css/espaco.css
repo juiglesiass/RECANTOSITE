@@ -1,0 +1,122 @@
+/* === SEÇÃO 3: O ESPAÇO === */
+.espaco-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px 80px;
+  background: linear-gradient(180deg, #EBE2D9 10%, #33212C 86%);
+  border-bottom: 0px solid #BA8C54;
+  text-align: center;
+}
+
+.espaco-lirio-bg {
+  position: absolute;
+  width: 923px;
+  height: auto;
+  top: 120px;
+  left: -400px;
+  transform: rotate(-42.74deg);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.espaco-title {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 96px;
+  color: #BA8C54;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.espaco-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #33212C;
+  max-width: 980px;
+  margin: 0 auto 20px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.espaco-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.espaco-card {
+  width: 280px;
+  text-align: center;
+}
+
+.espaco-img {
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.espaco-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFCB6E;
+  margin-bottom: 6px;
+}
+
+.espaco-card p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFECCB;
+  margin-bottom: 5px;
+}
+
+.espaco-card a {
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFCB6E;
+  text-decoration: underline;
+}
+
+.espaco-footer-text {
+  font-size: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: #FFCB6E;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.espaco-footer-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 20px;
+  border: 1px solid #FFCB6E;
+  border-radius: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #FFCB6E;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.espaco-footer-btn:hover {
+  background: #FFCB6E;
+  color: #33212C;
+}
+
+.anim-espaco {
+  opacity: 0;
+  transform: translateY(50px);
+}

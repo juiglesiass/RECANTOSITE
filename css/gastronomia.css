@@ -1,0 +1,57 @@
+/* === SEÇÃO 2 GASTRONOMIA === */
+.gastronomia-nova-section {
+  width: 100%;
+  background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 50%, #ECE3DA 50%, #ECE3DA 100%);
+  border-bottom: 1px solid #BA8C54;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.gastronomia-nova-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.talheres-icon {
+  width: 100px;
+  margin-bottom: -20px;
+  margin-top: -30px;
+  opacity: 0;
+}
+
+.gastronomia-nova-title {
+  font-family: 'Cormorant SC', serif;
+  font-size: 48px;
+  color: #BA8C54;
+  margin-bottom: 5px;
+  opacity: 0;
+}
+
+.gastronomia-nova-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #21151C;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  opacity: 0;
+}
+
+.gastronomia-nova-button {
+  display: inline-block;
+  background-color: #33212C;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: transform 1s ease;
+  opacity: 0;
+}
+
+.gastronomia-nova-button:hover {
+  transform: scale(1.05);
+}

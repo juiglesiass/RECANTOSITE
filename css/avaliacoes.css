@@ -1,0 +1,114 @@
+/* === SEÇÃO 4: AVALIAÇÕES === */
+.avaliacoes {
+  position: relative;
+  height: 297px;
+  background: linear-gradient(180deg, #33212C 0%, #21151C 100%);
+  border: 1px solid #BA8C54;
+  overflow: hidden;
+}
+
+.avaliacoes-container {
+  width: 1260px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+.depoimentos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 30px;
+  height: 100%;
+}
+
+.depoimento {
+  position: relative;
+  width: 320.88px;
+  height: 151.67px;
+  background: transparent;
+  color: #FFCB6E;
+}
+
+.estrelas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.estrelas::before {
+  content: "★★★★★";
+  color: #FFCB6E;
+  font-size: 28px;
+}
+
+.texto {
+  position: absolute;
+  top: 45px;
+  left: 3px;
+  width: 282.88px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFCB6E;
+}
+
+.data {
+  position: absolute;
+  top: 80px;
+  left: 3px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  color: #FFE4BD;
+  text-decoration: underline;
+}
+
+.autor {
+  position: absolute;
+  top: 115px;
+  left: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFE4BD;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.autor img {
+  width: 26.51px;
+  height: 24.88px;
+  border-radius: 50%;
+}
+
+.porcentagem {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.porcentagem h2 {
+  color: #BA8C54;
+  font-size: 96px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 120px;
+}
+
+.porcentagem p {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#contador {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}

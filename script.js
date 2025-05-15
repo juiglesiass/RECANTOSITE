@@ -9,28 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// === Slider de Gastronomia (se existir) ===
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-    dots[i].classList.toggle('active', i === index);
-  });
-  currentSlide = index;
-}
-
-function nextSlide() {
-  const next = (currentSlide + 1) % slides.length;
-  showSlide(next);
-}
-
-function goToSlide(index) {
-  showSlide(index);
-}
-
 // === Scroll desacelerado na seção de Avaliações ===
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,4 +30,62 @@ gsap.to(depoimentos, {
     anticipatePin: 1,
   }
 });
+
+// GSAP Hero
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray('.anim-hero').forEach((el, i) => {
+  gsap.fromTo(el,
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      delay: i * 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      }
+    });
+});
+
+// GSAP Gastronomia
+gsap.utils.toArray('.anim-gastro').forEach((el, i) => {
+  gsap.fromTo(el,
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      delay: i * 0.3,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      }
+    });
+});
+
+// GSAP Espaço
+gsap.utils.toArray('.anim-espaco').forEach((el, i) => {
+  gsap.fromTo(el,
+    { y: 60, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      delay: i * 0.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      }
+    });
+});
+
+
 

@@ -8,7 +8,16 @@
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="hero.css" />
+  <link rel="stylesheet" href="css/gastronomia.css" />
+  <link rel="stylesheet" href="css/espaco.css" />
+  <link rel="stylesheet" href="css/avaliacoes.css" />
+  <link rel="stylesheet" href="css/proposta.css" />
+
 </head>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <body>
   <!-- Cabeçalho -->
   <header class="site-header">
@@ -30,68 +39,70 @@
   </header>
 
   <!-- Seção 1: Hero -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <img src="assets/img/Logo_branco.png" alt="Logo Recanto Lírio dos Vales" class="hero-logo" />
-      <h1 class="hero-title">RECANTO LÍRIO DOS VALES</h1>
-      <p class="hero-text">
-        Todos os adjetivos que você sempre sonhou para transformar a sua celebração em um dia inesquecível você encontra aqui na Recanto Lírio dos Vales. Um lugar encantador e único que une conforto com harmonia e natureza.
-      </p>
-      <img src="assets/img/mouse-scroll.gif" alt="Desça para ver mais" class="scroll-gif" />
-    </div>
-  </section>
+<section class="hero-section">
+  <div class="hero-content">
+    <img src="assets/img/Logo_branco.png" alt="Logo Recanto Lírio dos Vales" class="hero-logo anim-hero" />
+    <h1 class="hero-title anim-hero">RECANTO LÍRIO DOS VALES</h1>
+    <p class="hero-text anim-hero">
+      Todos os adjetivos que você sempre sonhou para transformar a sua celebração em um dia inesquecível você encontra aqui na Recanto Lírio dos Vales. Um lugar encantador e único que une conforto com harmonia e natureza.
+    </p>
+    <img src="assets/img/mouse-scroll.gif" alt="Desça para ver mais" class="scroll-gif anim-hero" />
+  </div>
+</section>
 
-  <!-- Seção 2: Gastronomia -->
-  <section class="gastronomia-nova-section animate scroll-delay-1">
-    <div class="gastronomia-nova-content">
-      <img src="assets/img/icon-talheres.png" alt="Ícone Talheres" class="talheres-icon animate scroll-delay-2" />
-      <h2 class="gastronomia-nova-title animate scroll-delay-3">Gastronomia Exclusiva</h2>
-      <p class="gastronomia-nova-text animate scroll-delay-4">
-        São 4 opções de cardápio para sua escolha: Massas, Churrasco, Comidinhas e menu do Chef.<br>
-        Comida brasileira e quentinha. Mantemos com atenção os fogareiros bem acesos.
-      </p>
-      <a href="#contato" class="gastronomia-nova-button animate scroll-delay-5">ACESSE NOSSO CARDÁPIO DOS SONHOS</a>
-    </div>
-  </section>
+ <!-- Seção 2: Gastronomia -->
+<section class="gastronomia-nova-section">
+  <div class="gastronomia-nova-content">
+    <img src="assets/img/icon-talheres.png" alt="Ícone Talheres" class="talheres-icon anim-gastro" />
+    <h2 class="gastronomia-nova-title anim-gastro">Gastronomia Exclusiva</h2>
+    <p class="gastronomia-nova-text anim-gastro">
+      São 4 opções de cardápio para sua escolha: Massas, Churrasco, Comidinhas e menu do Chef.<br>
+      Comida brasileira e quentinha. Mantemos com atenção os fogareiros bem acesos.
+    </p>
+    <a href="#contato" class="gastronomia-nova-button anim-gastro">ACESSE NOSSO CARDÁPIO DOS SONHOS</a>
+  </div>
+</section>
 
   <!-- Seção 3: O Espaço -->
-  <section class="espaco-section" id="espaco">
-    <img src="assets/img/lirio-fundo.png" alt="Lírio decorativo" class="espaco-lirio-bg" />
-    <h2 class="espaco-title animate espaco-delay-1">O espaço</h2>
+<section class="espaco-section" id="espaco">
+  <img src="assets/img/lirio-fundo.png" alt="Lírio decorativo" class="espaco-lirio-bg" />
 
-    <p class="espaco-text intro animate espaco-delay-2">
-      Um lugar encantador e com uma atmosfera harmoniosa é o que deseja a maioria dos casais apaixonados.
-      O Recanto Lírio dos Vales está à altura da sua comemoração. Aqui os anfitriões poderão organizar uma linda recepção e acolher com qualidade e requinte os seus convidados.
-    </p>
+  <h2 class="espaco-title anim-espaco">O espaço</h2>
 
-    <p class="espaco-text detalhes animate espaco-delay-3">
-      O Recanto possui todos os adjetivos que você sempre sonhou para transformar a sua celebração em um grande dia. O local está cercado por muito verde, lindos jardins e uma linda vista panorâmica para a represa. A área externa espaço para cerimônia, chafariz e cachoeira.
-    </p>
+  <p class="espaco-text intro anim-espaco">
+    Um lugar encantador e com uma atmosfera harmoniosa é o que deseja a maioria dos casais apaixonados.
+    O Recanto Lírio dos Vales está à altura da sua comemoração. Aqui os anfitriões poderão organizar uma linda recepção e acolher com qualidade e requinte os seus convidados.
+  </p>
 
-    <div class="espaco-cards">
-      <div class="espaco-card animate espaco-delay-4">
-        <div class="espaco-img animate espaco-delay-5" style="background-image: url('assets/img/passarela_vidro.png');"></div>
-        <h3 class="animate espaco-delay-6">Passarela de Vidro</h3>
-        <p class="animate espaco-delay-7">Passarela de vidro sobre às águas</p>
-        <a href="#" class="animate espaco-delay-7">Mais informações</a>
-      </div>
-      <div class="espaco-card animate espaco-delay-8">
-        <div class="espaco-img animate espaco-delay-9" style="background-image: url('assets/img/discoteca.png');"></div>
-        <h3 class="animate espaco-delay-10">Discoteca</h3>
-        <p class="animate espaco-delay-11">Discoteca Ritmo dos Vales</p>
-        <a href="#" class="animate espaco-delay-11">Mais informações</a>
-      </div>
-      <div class="espaco-card animate espaco-delay-12">
-        <div class="espaco-img animate espaco-delay-13" style="background-image: url('assets/img/salao.png');"></div>
-        <h3 class="animate espaco-delay-14">Salão</h3>
-        <p class="animate espaco-delay-15">Salão principal</p>
-        <a href="#" class="animate espaco-delay-15">Mais informações</a>
-      </div>
+  <p class="espaco-text detalhes anim-espaco">
+    O Recanto possui todos os adjetivos que você sempre sonhou para transformar a sua celebração em um grande dia. O local está cercado por muito verde, lindos jardins e uma linda vista panorâmica para a represa. A área externa espaço para cerimônia, chafariz e cachoeira.
+  </p>
+
+  <div class="espaco-cards">
+    <div class="espaco-card anim-espaco">
+      <div class="espaco-img anim-espaco" style="background-image: url('assets/img/passarela_vidro.png');"></div>
+      <h3 class="anim-espaco">Passarela de Vidro</h3>
+      <p class="anim-espaco">Passarela de vidro sobre às águas</p>
+      <a href="#" class="anim-espaco">Mais informações</a>
     </div>
+    <div class="espaco-card anim-espaco">
+      <div class="espaco-img anim-espaco" style="background-image: url('assets/img/discoteca.png');"></div>
+      <h3 class="anim-espaco">Discoteca</h3>
+      <p class="anim-espaco">Discoteca Ritmo dos Vales</p>
+      <a href="#" class="anim-espaco">Mais informações</a>
+    </div>
+    <div class="espaco-card anim-espaco">
+      <div class="espaco-img anim-espaco" style="background-image: url('assets/img/salao.png');"></div>
+      <h3 class="anim-espaco">Salão</h3>
+      <p class="anim-espaco">Salão principal</p>
+      <a href="#" class="anim-espaco">Mais informações</a>
+    </div>
+  </div>
 
-    <p class="espaco-footer-text animate espaco-delay-16">Quer conhecer mais? Clique no botão abaixo.</p>
-    <a href="#espaco" class="espaco-footer-btn animate espaco-delay-17">Saiba Mais</a>
-  </section>
+  <p class="espaco-footer-text anim-espaco">Quer conhecer mais? Clique no botão abaixo.</p>
+  <a href="#espaco" class="espaco-footer-btn anim-espaco">Saiba Mais</a>
+</section>
+
 
 <!-- Seção 4: Avaliações -->
 <section class="avaliacoes" id="avaliacoes">
@@ -147,36 +158,90 @@
     </div>
   </section>
 
+  
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 
-<!-- Seção 5: Solicite uma Proposta -->
-
- <section id="contato-proposta" class="contato-proposta-section">
+<!-- === SEÇÃO 5: PROPOSTAS === -->
+<section class="contato-proposta-section">
   <div class="background-overlay"></div>
 
   <div class="conteudo-contato">
-    <div class="esquerda">
-      <h2 class="titulo-script">Solicite uma proposta!</h2>
-      <p class="subtitulo">Entre em Contato Conosco</p>
-      <a href="#orcamento" class="botao-contato">Solicite Seu Orçamento</a>
+    <div>
+      <h2 class="titulo-script">Solicite<br>uma proposta</h2>
+      <p class="subtitulo">Fale conosco e garanta seu evento inesquecível.</p>
+      <a href="#contato" class="botao-contato">Entrar em contato</a>
     </div>
 
-    <div class="direita">
-      <h3 class="redes-titulo">Nos conheça em todas as redes!</h3>
-      <p class="redes-subtitulo">Um outro lado.</p>
-
+    <div>
+      <p class="redes-titulo">Redes sociais</p>
+      <p class="redes-subtitulo">Acompanhe nossos eventos ao vivo:</p>
       <ul class="lista-contato">
-        <li><i class="fa-solid fa-phone"></i> <a href="tel:+5511998747925">Telefone: (11) 99874-7925</a></li>
-        <li><i class="fa-brands fa-facebook"></i> <a href="#">Facebook - Recanto Lírio dos Vales</a></li>
-        <li><i class="fa-brands fa-instagram"></i> <a href="#">Instagram - recantoliriodosvales_</a></li>
-        <li><i class="fa-solid fa-map-pin"></i> <a href="#">Localização - Estrada Nova Ipê, 1028, Diadema – SP</a></li>
-        <li><i class="fa-solid fa-lock"></i> <a href="#">Política de Privacidade</a></li>
+        <li><i class="fab fa-instagram"></i><a href="#">@recantoliriodosvales</a></li>
+        <li><i class="fab fa-facebook"></i><a href="#">facebook.com/recanto</a></li>
+        <li><i class="fas fa-phone"></i><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:contato@recantolirio.com">contato@recantolirio.com</a></li>
       </ul>
     </div>
   </div>
 </section>
+
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".titulo-script", {
+    scrollTrigger: {
+      trigger: ".titulo-script",
+      start: "top 85%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+
+  gsap.from(".subtitulo", {
+    scrollTrigger: {
+      trigger: ".subtitulo",
+      start: "top 90%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: "power3.out"
+  });
+
+  gsap.from(".botao-contato", {
+    scrollTrigger: {
+      trigger: ".botao-contato",
+      start: "top 90%",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
+    ease: "power3.out"
+  });
+
+  gsap.from(".redes-titulo, .redes-subtitulo, .lista-contato li", {
+    scrollTrigger: {
+      trigger: ".redes-titulo",
+      start: "top 90%",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    delay: 0.6,
+    ease: "power3.out"
+  });
+</script>
+
 
 <!-- Conteúdo futuro -->
 <main style="margin-top: 500px;">
