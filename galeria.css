@@ -156,16 +156,23 @@ body {
 }
 
 /* Galeria com as Fotos */
-.fotos-galeria {
+.fundo-fotos-galeria{
   position: relative;
-  width: 100%;
-  height: 1559px;
   background: linear-gradient(180deg, #ECE3DA 0%, #FFE4BD 86.01%), #FFFFFF;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fotos-galeria {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 58px;
+  max-width: 1900px;
 }
 
 .foto {
@@ -174,12 +181,6 @@ body {
   background-size: cover;
   background-position: center;
   margin: 0px 12px 15px 12px;
-}
-
-.linha-fotos{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
 }
 
 /* Rodapé */
