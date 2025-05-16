@@ -192,36 +192,43 @@ body {
   position: relative;
   width: 100%;
   height: 287px;
-  margin: 0 auto;
+}
+
+.fundo-rodape{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
 }
 
 .flores-rodape {
   position: absolute;
-  left: 0;
   width: 100%;
   height: 250px;
-  z-index: 1;
 }
 
 .conteudo-rodape {
-  position: absolute;
   width: 100%;
-  height: 197px;
+  height: 250px;
   background: linear-gradient(103.74deg, #21151C 52.99%, #875673 115.37%);
   border-bottom: 2px solid #FFCB6E;
 }
 
 .logo-rodape {
-  left: 10px;
-  top: -20px;
-  height: 193px;
-  width: 221px;
+  height: 200px;
+  width: 100%;
+}
+
+.img-logo-rodape {
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 .info-rodape {
   position: absolute;
   left: 170px;
-  top: 20px;
+  bottom: 60px;
   color: white;
   font-family: 'Cormorant Garamond', serif;
 }
@@ -255,7 +262,6 @@ body {
   margin-top: 2px;
   color: #FFFFFF;
   cursor: pointer;
-  z-index: 1;
 }
 
 .menu-links-rodape:hover{
@@ -288,7 +294,7 @@ body {
 
 .como-chegar {
   position: absolute;
-  top: 25px;
+  bottom: 170px;
   right: 385px;
   color: #FFCB6E;
   font-family: 'Cormorant Garamond', serif;
@@ -299,18 +305,11 @@ body {
   margin: 0;
 }
 
-.fa-location-dot {
-  font-size: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #FFCB6E;
-}
-
 .botao-rota {
-  margin-top: 0px;
+  margin-top: 10px;
   margin-left: 20px;
   width: 92px;
-  height: 36px;
+  height: 35px;
   border: 1.5px solid #BA8C54;
   border-radius: 76px;
   background: transparent;
@@ -318,16 +317,20 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 16px;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
-  padding: 1.5px;
+  padding: 5px;
   text-decoration: none;
-  z-index: 1;
+}
+
+.botao-rota:hover{
+  color: #33212C;
+  background-color: #FFCB6E;
 }
 
 .redes-rodape {
   position: absolute;
-  top: 30px;
+  bottom: 175px;
   right: 70px;
   color: #FFCB6E;
   font-family: 'Cormorant Garamond', serif;
@@ -339,21 +342,20 @@ body {
   gap: 20px;
 }
 
-.fa-instagram, .fa-facebook-f{
+.fa-instagram, .fa-facebook-f, .fa-location-dot{
   font-size: 20px;
   color: #FFCB6E;
   text-decoration: none;
   cursor: pointer;
-  z-index: 1;
 }
 
-.fa-instagram:hover, .fa-facebook-f:hover{
+.fa-instagram:hover, .fa-facebook-f:hover, .fa-location-dot:hover{
   color: #FFFFFF;
 }
 
 .premiacoes {
   position: absolute;
-  top: 127px;
+  bottom: 60px;
   right: 15px;
 }
 
@@ -363,7 +365,6 @@ body {
 }
 
 .rodape-final {
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: 90px;
@@ -375,9 +376,4 @@ body {
   color: #FFCB6E;
   text-align: center;
   line-height: 90px;
-  z-index: 2;
-}
-
-.teste{
-  z-index: 3;
 }
