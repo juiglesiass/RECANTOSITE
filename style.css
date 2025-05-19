@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  background-color:#33212C;
+  background-color: #33212C;
   line-height: 1.6;
 }
 
@@ -30,8 +30,8 @@ body {
     text-shadow 0.3s ease;
 }
 
-.pin-spacer{
-  background: linear-gradient(#33212C 40%, #21151C 100% ) ;
+.pin-spacer {
+  background: linear-gradient(#33212C 40%, #21151C 100%);
 }
 
 .nav-pill:hover {
@@ -132,7 +132,7 @@ body {
   }
 }
 
-   /* === ANIMAÇÃO EXCLUSIVA PARA A SEÇÃO O ESPAÇO === */
+/* === ANIMAÇÃO EXCLUSIVA PARA A SEÇÃO O ESPAÇO === */
 .espaco-section .animate {
   opacity: 0;
   transform: translateY(40px);
@@ -143,6 +143,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* Sequência de delays */
 .espaco-delay-1 { transition-delay: 0.1s; }
