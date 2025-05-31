@@ -161,8 +161,8 @@ body {
       position: absolute;
       width: 1210px;
       height: auto;
-      bottom: 0px;
       margin: 0px 200px;
+      bottom: 0px;
     }
 
     .carrossel-imagens {
@@ -256,7 +256,7 @@ body {
     }
 
 
-
+    /* Nossos Servicos */
     .nossos-servicos{
       position: relative;
       display: flex;
@@ -269,6 +269,7 @@ body {
       background: linear-gradient(180deg, #120A0F 6.16%, #33212C 100%);
       color: #fff;
       gap: 30px;
+      border-bottom: 4px solid #BA8C54;
     }
 
     .lirio-nossos-servicos{
@@ -378,6 +379,12 @@ body {
       font-style: italic;
       font-size: 14px;
       font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-cards:hover{
+      background-color: #FFFFFF;
+      color: #120A0F;
     }
 
     .card_buffet{
@@ -394,3 +401,196 @@ body {
       background-image: url(assets/img/foto\ deco.jpg);
       z-index: 1;
     }
+
+    
+    /* Rodapé */
+.rodape {
+  position: relative;
+  width: 100%;
+  height: 287px;
+  bottom: -290px;
+}
+
+.fundo-rodape{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.flores-rodape {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+.conteudo-rodape {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(103.74deg, #21151C 52.99%, #875673 115.37%);
+  border-bottom: 2px solid #FFCB6E;
+}
+
+.logo-rodape {
+  height: 200px;
+  width: 100%;
+}
+
+.img-logo-rodape {
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.info-rodape {
+  position: absolute;
+  left: 170px;
+  bottom: 60px;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.info-rodape .titulo-rodape {
+  font-size: 24px;
+  color: #FFCB6E;
+}
+
+.info-rodape .subtitulo-rodape {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.linha-rodape {
+  width: 247px;
+  border: 1px solid #FFCB6E;
+  margin: 8px 0;
+}
+
+.menu-titulo-rodape {
+  color: #FFCB6E;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-links-rodape {
+  text-decoration: underline;
+  text-decoration-color:#FFCB6E;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.menu-links-rodape:hover{
+  color: #BA8C54;
+}
+
+.lista-menu-links-rodape {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-circle{
+  font-size: 3px;
+  padding: 13px;
+}
+
+.telefone-rodape {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0px;
+  text-decoration: underline;
+  text-decoration-color: #BA8C54;
+  text-underline-offset: 3px;
+  font-family: "Cormorant Infant", sans-serif;
+}
+
+.telefone-rodape span {
+  color: #BA8C54;
+}
+
+.como-chegar {
+  position: absolute;
+  bottom: 170px;
+  right: 385px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.titulos-rodape {
+  font-size: 25px;
+  margin: 0;
+}
+
+.botao-rota {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 92px;
+  height: 35px;
+  border: 1.5px solid #BA8C54;
+  border-radius: 76px;
+  background: transparent;
+  color: #BA8C54;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.botao-rota:hover{
+  color: #33212C;
+  background-color: #FFCB6E;
+}
+
+.redes-rodape {
+  position: absolute;
+  bottom: 175px;
+  right: 70px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.redes-sociais-rodape {
+  display: flex;
+  flex-direction: initial;
+  gap: 20px;
+}
+
+.fa-instagram, .fa-facebook-f, .fa-location-dot{
+  font-size: 20px;
+  color: #FFCB6E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-instagram:hover, .fa-facebook-f:hover, .fa-location-dot:hover{
+  color: #FFFFFF;
+}
+
+.premiacoes {
+  position: absolute;
+  bottom: 60px;
+  right: 15px;
+}
+
+.premiacoes img {
+  width: 500px;
+  height: 54.8px;
+}
+
+.rodape-final {
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(90deg, #21151C 24.13%, #33212C 100%);
+  font-family: 'Cormorant Infant', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFCB6E;
+  text-align: center;
+  line-height: 90px;
+}
