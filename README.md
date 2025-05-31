@@ -3,5 +3,4 @@
  ##
 https://pedrokme.github.io/RECANTOSITE/
 
-corrigir icone de localizacao no rodape da galeria
 corrigir scroll depoimentos
