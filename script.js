@@ -60,30 +60,3 @@ function animaScroll(classe, delay = 0.3, startTrigger = "top 85%") {
 animaScroll('.anim-hero', 0.3, "top 80%");
 animaScroll('.anim-gastro', 0.3, "top 85%");
 animaScroll('.anim-espaco', 0.2, "top 85%");
-
-// Swiper Carrosel em Espaco
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  grabCursor: true,
-  centeredSlides: true,
-  freeMode: true,
-  speed:7000,
-  slidesPerView:"auto",
-  autoplay: {
-        delay: 0,
-  },
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
