@@ -152,7 +152,6 @@ body {
       width: 100%;
       height: 1229px;
       top: 290px;
-      padding-top: 40px;
       background: linear-gradient(180deg, #33212C 6.16%, #120A0F 100%);
       color: #fff;
     }
@@ -165,17 +164,55 @@ body {
       bottom: 0px;
     }
 
+
+/* Swiper */
+
+    .swiper {
+      width: 100%;
+      height: 500px;
+      box-shadow: 0px 0px 20px 0px rgba(92, 115, 160, 0.07);
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+      color: #ecbc68;;
+      background-color: transparent;
+      border-radius: 100px;
+      border: 2px solid #ecbc68;
+      width: 35px;
+      height: 35px;
+      box-shadow: 0px 0px 20px 0px rgba(92, 115, 160, 0.09);
+    }
+
+    .swiper-button-next::after{
+      content: '\f054';
+      font-family: 'Font Awesome 5 free';
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .swiper-button-prev::after{
+      content: '\f053';
+      font-family: 'Font Awesome 5 free';
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #ecbc68;
+    }
+
     .carrossel-imagens {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
-      height: 420px;
+      height: 500px;
     }
 
-    .carrossel-imagens img {
-      height: 100%;
+    .swiper-slide {
       object-fit: cover;
-      border-radius: 4px;
+      display: block;
+      height: 100%;
+      width: auto;
     }
 
     .texto-intro1, .texto-intro2{

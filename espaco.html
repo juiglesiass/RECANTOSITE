@@ -6,6 +6,10 @@
   <title>Espaço</title>
   <link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!--Carrossel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 
   <!-- CSS -->
@@ -53,11 +57,33 @@
     <!-- Fotos e Espacos esclusivos -->
     <section class="conteudo-instalacoes">
     <img src="assets/img/lirio-espaco.png" alt="lirio desenho" class="lirio-espaco">
-    <div class="carrossel-imagens">
-      <img src="assets/img/espaco1.png" alt="Casamento 1">
-      <img src="assets/img/espaco2.png" alt="Casamento 2">
-      <img src="assets/img/espaco3.png" alt="Casamento 3">
-    </div>
+
+    <!--Swiper-->
+        <!-- Slider main container -->
+        <div class="carrossel-imagens">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+        </div>
 
     <div class="texto-intro1">
       <p>Um lugar encantador e com uma atmosfera harmoniosa é o que deseja a maioria dos casais apaixonados.<br>O Recanto Lírio dos Vales está à altura da sua comemoração.</p>
@@ -139,6 +165,11 @@
   </section>
 
   <!-- Scripts -->
+
+  <!--JS Carrossel-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+
   <script>
     // Rolagem suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
