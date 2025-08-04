@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicite Seu Orçamento - Recanto Lírio dos Vales</title>
+  <link rel="stylesheet" href="css/orcamento.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo Recanto" />
+      <span>Recanto Lírio dos Vales</span>
+    </div>
+    <nav class="nav-menu">
+      <a href="index.html">Quem somos</a>
+      <a href="espaco.html">Espaço</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="orcamento.html" class="ativo">Orçamento</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container1">
+    <h1 class="titulo">Entre em contato</h1>
+    <p class="subtitulo">Para mais informações sobre nossos pacotes de casamento, disponibilidade de datas ou agendar uma visita ao Recanto Lírio dos Vales, por favor, preencha o formulário abaixo.</p>
+
+    <form class="contact_form" method="post" action="https://app4.meeventos.com.br/recantoliriodosvalesabcsp/?x=7&c=d42a107ec3390466d656c4080acb89522022020808190000008&tipo=formorc">
+      <label>Nome*<input type="text" name="fnome" required maxlength="200" /></label>
+      <label>E-mail*<input type="email" name="femail" required maxlength="200" /></label>
+      <label>Celular<input type="tel" name="fcelular" maxlength="15" /></label>
+      <label>Data do Evento<input type="date" name="fdata" maxlength="15" /></label>
+      <label>Tipo do Evento
+        <select name="ftipo">
+          <option value="1">Casamento</option>
+          <option value="2">Debutante</option>
+          <option value="10">Outros</option>
+        </select>
+      </label>
+      <label>Como nos conheceu?<input type="text" name="fconheceu" maxlength="100" /></label>
+      <label>N° de Convidados<input type="number" name="fconvidados" maxlength="100" /></label>
+      <fieldset>
+        <legend>Como gostaria de receber nosso orçamento?</legend>
+        <label><input type="radio" name="fcomo" value="E-mail" checked /> E-mail</label>
+        <label><input type="radio" name="fcomo" value="WhatsApp" /> WhatsApp</label>
+        <label><input type="radio" name="fcomo" value="Telefone" /> Telefone</label>
+      </fieldset>
+      <label>Mensagem<textarea name="fmsg"></textarea></label>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 . Recanto Lírio dos Vales . Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="orcamento.js"></script>
+</body>
+</html>
