@@ -6,6 +6,10 @@
   <title>Espaço</title>
   <link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!--Carrossel-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 
   <!-- CSS -->
@@ -50,15 +54,38 @@
   <section class="faixa-decorativa"></section>
 
 
-
     <!-- Fotos e Espacos esclusivos -->
-<div class="conteudo-instalacoes">
+    <section class="conteudo-instalacoes">
     <img src="assets/img/lirio-espaco.png" alt="lirio desenho" class="lirio-espaco">
-    <div class="carrossel-imagens">
-      <img src="assets/img/espaco1.png" alt="Casamento 1">
-      <img src="assets/img/espaco2.png" alt="Casamento 2">
-      <img src="assets/img/espaco3.png" alt="Casamento 3">
-    </div>
+
+    <!--Swiper-->
+        <!-- Slider main container -->
+        <div class="carrossel-imagens">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+              <img src="assets/img/espaco1.png" alt="Casamento 1" class="swiper-slide">
+              <img src="assets/img/espaco2.png" alt="Casamento 2" class="swiper-slide">
+              <img src="assets/img/espaco3.png" alt="Casamento 3" class="swiper-slide">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+
+            <!-- If we need navigation buttons 
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            -->
+
+          </div>
+        </div>
 
     <div class="texto-intro1">
       <p>Um lugar encantador e com uma atmosfera harmoniosa é o que deseja a maioria dos casais apaixonados.<br>O Recanto Lírio dos Vales está à altura da sua comemoração.</p>
@@ -96,9 +123,55 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+    <!-- Nossos Serviços -->
+  <section class="nossos-servicos">
+    <img src="assets/img/lirio-nossos-servicos.png" alt="lirio desenho" class="lirio-nossos-servicos">
+    <div class="nossos-servicos-up">
+
+      <div class="nossos-servicos-textos">
+        <h1>Nossos Serviços</h1>
+        <p>Oferecemos uma variedade de serviços para tornar o seu casamento inesquecível. Desde decoração personalizada até catering de alta qualidade, estamos aqui para atender a todas as suas necessidades.</p>
+      </div>
+
+      <div class="card_sono">
+          <h3 class="titulos-cards"></i>sonorização</h3>
+          <p>No Recanto Lírio dos Vales, garantimos uma sonorização impecável para tornar seu casamento ainda mais especial. Com equipamentos de alta qualidade, proporcionamos som nítido e envolvente para cada momento, da cerimônia à celebração. Emocione-se com uma experiência sonora perfeita!</p>
+          <button class="btn-cards">Saiba Mais</button>
+        </div>
+
+    </div>
+
+    <div class="nossos-servicos-down">
+
+      <div class="servico-card card_buffet">
+          <h3 class="titulos-cards"></i>buffet</h3>
+          <p>O catering do Recanto Lírio dos Vales oferece opções culinárias deliciosas e sofisticadas, com menus personalizados para satisfazer todos os gostos e restrições alimentares.</p>
+          <button class="btn-cards">Saiba Mais</button>
+        </div>
+
+        <div class="servico-card card_acess">
+          <h3 class="titulos-cards"></i>acessoria</h3>
+          <p>Nossa equipe altamente qualificada e experiente está sempre pronta para atender às suas necessidades, garantindo um serviço impecável e atencioso.</p>
+        <button class="btn-cards">Saiba Mais</button>
+        </div>
+
+        <div class="servico-card card_deco">
+          <h3 class="titulos-cards"></i>decoração</h3>
+          <p>Com uma localização privilegiada no coração da natureza, o Recanto Lírio dos Vales proporciona um ambiente tranquilo e romântico para celebrar o seu casamento.</p>
+        <button class="btn-cards">Saiba Mais</button>
+        </div>
+
+    </div>
+  </section>
 
   <!-- Scripts -->
+
+  <!--JS Carrossel-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="espaco.js"></script>
+
   <script>
     // Rolagem suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -125,4 +198,75 @@
 
   </script>
 </body>
+
+    <!-- Rodapé -->
+<footer class="rodape">
+  <div class="fundo-rodape"> 
+    <img class="flores-rodape" src="assets/img/lirio-rodape.png" alt="Fundo Floral">
+    <div class="conteudo-rodape">
+      <div class="logo-rodape">
+      <a href="index.html"><img src="assets/img/Logo_rodape.png" class="img-logo-rodape"></a> <!--LOGO ESTA PIXELADA DE TAO PEQUENA, PRECISA TROCAR-->
+      </div>
+      <div class="info-rodape">
+        <h2 class="titulo-rodape">Recanto Lírio do Vales</h2>
+        <p class="subtitulo-rodape">Espaço para Casamentos e Debutantes</p>
+        <hr class="linha-rodape" />
+        <p class="menu-titulo-rodape">Menu</p>
+
+        <div class="lista-menu-links-rodape">
+          <p class="menu-links-rodape">
+          Quem somos
+          </p>
+          <i class="fa-solid fa-circle"></i>
+
+          <a href="espaco.html" class="menu-links-rodape">Espaço</a>
+          <i class="fa-solid fa-circle"></i>
+          
+          <a href="galeria.html" class="menu-links-rodape">Galeria</a>
+          <i class="fa-solid fa-circle"></i>
+
+          <p class="menu-links-rodape">
+          Serviços 
+          </p>
+          <i class="fa-solid fa-circle"></i>
+
+          <p class="menu-links-rodape">
+          Orçamento 
+          </p>
+          <i class="fa-solid fa-circle"></i>
+
+          <p class="menu-links-rodape">
+          Contato
+          </p>
+        </div>
+
+        <p class="telefone-rodape">Telefone <span>(11) 99874-7925</span></p>
+      </div>
+
+      <div class="como-chegar">
+        <p class="titulos-rodape">Como chegar</p>
+        <a target="_blank" href="https://www.google.com.br/maps/place/Recanto+L%C3%ADrio+dos+Vales/@-23.7246507,-46.6367671,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce4434a6c7435f:0xdeb20e180a342531!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="fa-solid fa-location-dot"></a>
+
+        <a target="_blank" href="https://www.google.com.br/maps/dir//Recanto+L%C3%ADrio+dos+Vales,+Pr+Vermelha+-+Estr.+Nova+Ip%C3%AA,+1028+-+Eldorado,+Diadema+-+SP,+09971-580/@-23.7246556,-46.6367617,17z/data=!4m17!1m7!3m6!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2sRecanto+L%C3%ADrio+dos+Vales!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df!4m8!1m0!1m5!1m1!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2m2!1d-46.6341787!2d-23.7246615!3e3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="botao-rota">Traçar Rota</a>
+
+      </div>
+
+      <div class="redes-rodape">
+        <p class="titulos-rodape">Siga em nossas Redes</p>
+        <div class="redes-sociais-rodape">
+          <a target="_blank" href="https://www.instagram.com/recantoliriodosvales_/" class="fa-brands fa-instagram"></a>
+          <a target="_blank" href="https://www.facebook.com/liriodosvalesrecanto?locale=pt_BR" class="fa-brands fa-facebook-f"></a>
+        </div>
+      </div>
+
+      <div class="premiacoes">
+        <img src="assets/img/Premiações.png" />
+      </div>
+      </div>
+  </div>
+  <div class="rodape-final">
+    © 2025 . Recanto Lírio dos Vales . Todos os direitos reservados.
+  </div>
+</footer>
+
 </html>
