@@ -7,6 +7,7 @@
 
     <!-- CSS -->
   <link rel="stylesheet" href="galeria.css" />
+  <link rel="stylesheet" href="css/header.css" />
   
     <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&display=swap" rel="stylesheet">
@@ -24,13 +25,38 @@
         <span class="site-name">Recanto Lírio dos Vales</span>
       </div>
       <nav class="navigation">
-        <a href="#quem-somos" class="nav-pill">Quem somos</a>
-        <a href="espaco.html" class="nav-pill">Espaço</a>
-        <a href="galeria.html" class="nav-pill">Galeria</a>
-        <a href="#servicos" class="nav-pill">Serviços</a>
-        <a href="#orcamento" class="nav-pill">Orçamento</a>
-        <a href="#contato" class="nav-pill">Contato</a>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="quem-somos.html" class="nav-pill">Quem somos</a></li>
+          <li><a href="espaco.html" class="nav-pill">Espaço</a></li>
+          <li><a href="galeria.html" class="nav-pill">Galeria</a></li>
+          <li><a href="#servicos" class="nav-pill">Serviços</a></li>
+          <li><a href="orcamento.html" class="nav-pill">Orçamento</a></li>
+          <li><a href="#contato" class="nav-pill">Contato</a></li>
+        </ul>
       </nav>
+    </div>
+    
+    <!-- Menu Mobile Lateral -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo" class="mobile-logo">
+          <button class="mobile-menu-close">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="quem-somos.html" class="mobile-nav-link">Quem somos</a>
+          <a href="espaco.html" class="mobile-nav-link">Espaço</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="#servicos" class="mobile-nav-link">Serviços</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="#contato" class="mobile-nav-link">Contato</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -127,9 +153,9 @@
         <p class="menu-titulo-rodape">Menu</p>
 
         <div class="lista-menu-links-rodape">
-          <p class="menu-links-rodape">
+          <a href="quem-somos.html" class="menu-links-rodape">
           Quem somos
-          </p>
+          </a>
           <i class="fa-solid fa-circle"></i>
 
           <a href="espaco.html" class="menu-links-rodape">Espaço</a>
@@ -138,19 +164,19 @@
           <a href="galeria.html" class="menu-links-rodape">Galeria</a>
           <i class="fa-solid fa-circle"></i>
 
-          <p class="menu-links-rodape">
+          <a href="#servicos" class="menu-links-rodape">
           Serviços 
-          </p>
+          </a>
           <i class="fa-solid fa-circle"></i>
 
-          <p class="menu-links-rodape">
+          <a href="orcamento.html" class="menu-links-rodape">
           Orçamento 
-          </p>
+          </a>
           <i class="fa-solid fa-circle"></i>
 
-          <p class="menu-links-rodape">
+          <a href="#contato" class="menu-links-rodape">
           Contato
-          </p>
+          </a>
         </div>
 
         <p class="telefone-rodape">Telefone <span>(11) 99874-7925</span></p>
@@ -182,4 +208,6 @@
   </div>
 </footer>
 
+<script src="mobile-menu.js"></script>
+</body>
 </html>

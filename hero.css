@@ -6,7 +6,7 @@
   background-image: 
     linear-gradient(0deg, rgba(1, 0, 0, 0.6), rgba(1, 0, 0, 0.326)),
     linear-gradient(180deg, rgba(51, 33, 44, 0.842), rgba(51, 33, 44, 0.497)),
-    url('assets/img/background.png');
+    url('assets/img/nova_capa.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,3 +61,76 @@
   margin-right: auto;
   opacity: 0;
 }
+
+
+/* === RESPONSIVIDADE MOBILE PARA HERO === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 600px;
+    background-attachment: scroll; /* Fix para mobile */
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  
+  .hero-logo {
+    width: 150px;
+    height: 127px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text {
+    font-size: 16px;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  
+  .scroll-gif {
+    width: 15px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    padding: 0 10px;
+  }
+  
+  .hero-logo {
+    width: 120px;
+    height: 102px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text {
+    font-size: 14px;
+    max-width: 95%;
+    line-height: 1.4;
+  }
+  
+  .scroll-gif {
+    width: 12px;
+    margin-top: 15px;
+  }
+}
+

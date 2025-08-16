@@ -1,124 +1,585 @@
-/* orcamento.css */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
-  font-family: 'El Messiri', sans-serif;
-  background-color: #1E1E1E;
-  color: #33212C;
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
 }
 
-.header {
-  background: #33212C;
-  border-bottom: 1px solid #BA8C54;
-  padding: 20px;
+/* === HEADER COM TRANSIÇÃO === */
+.site-header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  transition: background-color 2s ease, backdrop-filter 2s ease;
+  backdrop-filter: blur(3px);
+  background-color: rgba(51, 33, 44, 0);
 }
 
-.logo {
+.site-header.scrolled {
+  background-color: rgba(51, 33, 44, 1);
+  backdrop-filter: none;
+}
+
+.site-header .container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.site-name {
+  font-size: 20px;
+  color: #FFCB6E;
+  font-weight: 400;
+}
+
+/* === NAVEGAÇÃO COM HOVER SUAVE E BRILHO === */
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pill {
+  padding: 8px;
+  height: 36px;
+  font-size: 20px;
   color: #FFCB6E;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
-.logo img {
-  height: 50px;
+.nav-pill:hover {
+  color: #f6ac52;
+  transform: scale(1.08);
+  text-shadow: 0 0 2px #FFD580, 0 0 15px #FFD580;
 }
 
-.container1 {
+/* === SEÇÃO HERO ORÇAMENTO === */
+.orcamento-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-top: 90px;
+  background: linear-gradient(93.84deg, #33212C 30.05%, #21151C 74.41%);
+  border-bottom: 5px solid #BA8C54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orcamento-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.lirio-orcamento {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  opacity: 0.3;
+}
+
+.orcamento-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
   max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #EBE2D9;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  padding: 0 20px;
 }
 
-.titulo {
+.orcamento-titulo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  color: #BA8C54;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.orcamento-subtitulo {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.8;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* === SEÇÃO FORMULÁRIO === */
+.formulario-section {
+  background: linear-gradient(180deg, #ECE3DA 0%, #FFE4BD 86.01%);
+  padding: 80px 0;
+  min-height: 100vh;
+}
+
+.formulario-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.formulario-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.formulario-titulo {
+  font-family: 'Great Vibes', cursive;
   font-size: 48px;
-  font-family: 'Cormorant SC', serif;
-  background: linear-gradient(90deg, #FFECCB 0%, #FFE4BD 26%, #FFFFFF 50%, #FFE4BD 75%, #FFECCB 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #33212C;
   text-align: center;
-  margin-bottom: 10px;
-}
-
-.subtitulo {
-  color: #FFCB6E;
-  text-align: center;
-  font-size: 20px;
   margin-bottom: 40px;
 }
 
-form {
+/* === FORMULÁRIO === */
+.contact_form {
   display: flex;
   flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-form label {
-  font-weight: 700;
-  font-size: 18px;
-  color: #33212C;
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
-input, select, textarea {
-  margin-top: 8px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #000;
-  border-radius: 4px;
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-legend {
+.form-group label {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
-  font-weight: bold;
-  color: #33212C;
-  margin-bottom: 5px;
-}
-
-button[type="submit"] {
-  width: 200px;
-  align-self: center;
-  background: #BA8C54;
-  color: #21151C;
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
   font-weight: 600;
+  color: #33212C;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px;
+  border: 2px solid #E0D5CC;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #BA8C54;
+  box-shadow: 0 0 0 3px rgba(186, 140, 84, 0.1);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* === BOTÃO DE ENVIO === */
+.submit-btn {
+  background: linear-gradient(135deg, #BA8C54 0%, #A67A47 100%);
+  color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
-  padding: 10px;
+  font-weight: 600;
+  padding: 18px 40px;
   border: none;
-  border-radius: 35px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(186, 140, 84, 0.3);
 }
 
-button[type="submit"]:hover {
-  background: #A97A49;
+.submit-btn:hover {
+  background: linear-gradient(135deg, #A67A47 0%, #8F6A3E 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(186, 140, 84, 0.4);
 }
 
-.footer {
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* === RODAPÉ === */
+.rodape {
+  position: relative;
+  width: 100%;
+  height: 287px;
+}
+
+.fundo-rodape{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.flores-rodape {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+.conteudo-rodape {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(103.74deg, #21151C 52.99%, #875673 115.37%);
+  border-bottom: 2px solid #FFCB6E;
+}
+
+.logo-rodape {
+  height: 200px;
+  width: 100%;
+}
+
+.img-logo-rodape {
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.info-rodape {
+  position: absolute;
+  left: 170px;
+  bottom: 60px;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.info-rodape .titulo-rodape {
+  font-size: 24px;
+  color: #FFCB6E;
+}
+
+.info-rodape .subtitulo-rodape {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.linha-rodape {
+  width: 247px;
+  border: 1px solid #FFCB6E;
+  margin: 8px 0;
+}
+
+.menu-titulo-rodape {
+  color: #FFCB6E;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-links-rodape {
+  text-decoration: underline;
+  text-decoration-color:#FFCB6E;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.menu-links-rodape:hover{
+  color: #BA8C54;
+}
+
+.lista-menu-links-rodape {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-circle{
+  font-size: 3px;
+  padding: 13px;
+}
+
+.telefone-rodape {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0px;
+  text-decoration: underline;
+  text-decoration-color: #BA8C54;
+  text-underline-offset: 3px;
+  font-family: "Cormorant Infant", sans-serif;
+}
+
+.telefone-rodape span {
+  color: #BA8C54;
+}
+
+.como-chegar {
+  position: absolute;
+  bottom: 170px;
+  right: 385px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.titulos-rodape {
+  font-size: 25px;
+  margin: 0;
+}
+
+.botao-rota {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 92px;
+  height: 35px;
+  border: 1.5px solid #BA8C54;
+  border-radius: 76px;
+  background: transparent;
+  color: #BA8C54;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.botao-rota:hover{
+  color: #33212C;
+  background-color: #FFCB6E;
+}
+
+.redes-rodape {
+  position: absolute;
+  bottom: 175px;
+  right: 70px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.redes-sociais-rodape {
+  display: flex;
+  flex-direction: initial;
+  gap: 20px;
+}
+
+.fa-instagram, .fa-facebook-f, .fa-location-dot{
+  font-size: 20px;
+  color: #FFCB6E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-instagram:hover, .fa-facebook-f:hover, .fa-location-dot:hover{
+  color: #FFFFFF;
+}
+
+.premiacoes {
+  position: absolute;
+  bottom: 60px;
+  right: 15px;
+}
+
+.premiacoes img {
+  width: 500px;
+  height: 54.8px;
+}
+
+.rodape-final {
+  bottom: 0;
+  width: 100%;
+  height: 90px;
   background: linear-gradient(90deg, #21151C 24.13%, #33212C 100%);
+  font-family: 'Cormorant Infant', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
   color: #FFCB6E;
   text-align: center;
-  padding: 20px;
-  font-family: 'Cormorant Infant', serif;
-  font-size: 20px;
-  font-style: italic;
+  line-height: 90px;
 }
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .orcamento-titulo {
+    font-size: 60px;
+  }
+  
+  .formulario-titulo {
+    font-size: 36px;
+  }
+  
+  .formulario-card {
+    padding: 30px 20px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .navigation {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .nav-pill {
+    font-size: 16px;
+    padding: 6px;
+  }
+  
+  .orcamento-hero {
+    height: 50vh;
+  }
+}
+
+
+/* === RESPONSIVIDADE MOBILE PARA ORÇAMENTO === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  
+  .hero-text {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  
+  .form-section {
+    padding: 40px 15px;
+  }
+  
+  .form-container {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+  
+  .form-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-text {
+    font-size: 14px;
+    max-width: 95%;
+  }
+  
+  .form-section {
+    padding: 30px 10px;
+  }
+  
+  .form-container {
+    padding: 20px 15px;
+  }
+  
+  .form-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+  
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 25px;
+    margin-top: 15px;
+  }
+}
+

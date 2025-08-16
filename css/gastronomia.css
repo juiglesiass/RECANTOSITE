@@ -55,3 +55,66 @@
 .gastronomia-nova-button:hover {
   transform: scale(1.05);
 }
+
+/* === RESPONSIVIDADE MOBILE PARA GASTRONOMIA === */
+@media (max-width: 768px) {
+  .gastronomia-nova-section {
+    padding: 40px 15px;
+  }
+  
+  .gastronomia-nova-content {
+    max-width: 100%;
+  }
+  
+  .talheres-icon {
+    width: 80px;
+    margin-bottom: -15px;
+    margin-top: -20px;
+  }
+  
+  .gastronomia-nova-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .gastronomia-nova-text {
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+  
+  .gastronomia-nova-button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gastronomia-nova-section {
+    padding: 30px 10px;
+  }
+  
+  .talheres-icon {
+    width: 60px;
+    margin-bottom: -10px;
+    margin-top: -15px;
+  }
+  
+  .gastronomia-nova-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .gastronomia-nova-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    line-height: 1.4;
+  }
+  
+  .gastronomia-nova-button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+

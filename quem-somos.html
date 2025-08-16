@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Recanto Lírio dos Vales</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="quem-somos.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+SC:wght@400;600&family=El+Messiri:wght@500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Icones Rodape -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-area">
+        <a href="index.html"><img src="assets/img/Logo_recanto-sem-fundo.png" class="logo"></a>
+        <span class="site-name">Recanto Lírio dos Vales</span>
+      </div>
+      <nav class="navigation">
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="quem-somos.html" class="nav-pill">Quem somos</a></li>
+          <li><a href="espaco.html" class="nav-pill">Espaço</a></li>
+          <li><a href="galeria.html" class="nav-pill">Galeria</a></li>
+          <li><a href="#servicos" class="nav-pill">Serviços</a></li>
+          <li><a href="orcamento.html" class="nav-pill">Orçamento</a></li>
+          <li><a href="#contato" class="nav-pill">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- Menu Mobile Lateral -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo" class="mobile-logo">
+          <button class="mobile-menu-close">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="quem-somos.html" class="mobile-nav-link">Quem somos</a>
+          <a href="espaco.html" class="mobile-nav-link">Espaço</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="#servicos" class="mobile-nav-link">Serviços</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="#contato" class="mobile-nav-link">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção Nossa Missão -->
+  <section class="nossa-missao">
+    <div class="fundo-missao">
+      <img src="assets/img/lirio desenho.png" alt="lirio" class="lirio-missao">
+    </div>
+    <div class="conteudo-missao">
+      <h1 class="titulo-missao">Nossa Missão</h1>
+      <div class="texto-missao">
+        <p class="paragrafo-missao">
+          O Recanto Lírio dos Vales tem como missão proporcionar momentos únicos e inesquecíveis, oferecendo um espaço encantador que une natureza, elegância e sofisticação para celebrações especiais.
+        </p>
+        <p class="paragrafo-missao">
+          Nosso compromisso é transformar sonhos em realidade, criando um ambiente harmonioso onde cada detalhe é cuidadosamente pensado para garantir que sua celebração seja perfeita e memorável.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Nosso Compromisso -->
+  <section class="nosso-compromisso">
+    <div class="container-compromisso">
+      <h2 class="titulo-compromisso">Nosso Compromisso</h2>
+      <div class="conteudo-compromisso">
+        <div class="texto-compromisso">
+          <p>
+            O Recanto Lírio dos Vales tem como missão proporcionar momentos únicos e inesquecíveis, oferecendo um espaço encantador que une natureza, elegância e sofisticação para celebrações especiais. Nosso compromisso é transformar sonhos em realidade, criando um ambiente harmonioso onde cada detalhe é cuidadosamente pensado para garantir que sua celebração seja perfeita e memorável.
+          </p>
+          <p>
+            Acreditamos que cada evento é único e especial, por isso oferecemos um atendimento personalizado e dedicado, sempre buscando superar as expectativas dos nossos clientes e criar momentos que ficarão para sempre na memória.
+          </p>
+        </div>
+        <div class="redes-sociais-compromisso">
+          <a target="_blank" href="https://www.facebook.com/liriodosvalesrecanto?locale=pt_BR" class="rede-social">
+            <i class="fab fa-facebook-f"></i>
+            Facebook - Recanto Lírio dos Vales
+          </a>
+          <a target="_blank" href="https://www.instagram.com/recantoliriodosvales_/" class="rede-social">
+            <i class="fab fa-instagram"></i>
+            Instagram - @recantoliriodosvales
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Reconhecimento -->
+  <section class="reconhecimento">
+    <div class="container-reconhecimento">
+      <h2 class="titulo-reconhecimento">Reconhecimento</h2>
+      <p class="texto-reconhecimento">
+        Fomos reconhecidos por nossa excelência em proporcionar experiências únicas e inesquecíveis aos nossos clientes ao longo dos anos.
+      </p>
+      <div class="premiacoes-reconhecimento">
+        <img src="assets/img/Premiações.png" alt="Premiações" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Rolagem suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Header transparente
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector(".site-header");
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+  <script src="mobile-menu.js"></script>
+
+</body>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="fundo-rodape"> 
+    <img class="flores-rodape" src="assets/img/lirio-rodape.png" alt="Fundo Floral">
+    <div class="conteudo-rodape">
+      <div class="logo-rodape">
+      <a href="index.html"><img src="assets/img/Logo_rodape.png" class="img-logo-rodape"></a>
+      </div>
+      <div class="info-rodape">
+        <h2 class="titulo-rodape">Recanto Lírio do Vales</h2>
+        <p class="subtitulo-rodape">Espaço para Casamentos e Debutantes</p>
+        <hr class="linha-rodape" />
+        <p class="menu-titulo-rodape">Menu</p>
+
+        <div class="lista-menu-links-rodape">
+          <a href="quem-somos.html" class="menu-links-rodape">
+          Quem somos
+          </a>
+          <i class="fa-solid fa-circle"></i>
+
+          <a href="espaco.html" class="menu-links-rodape">Espaço</a>
+          <i class="fa-solid fa-circle"></i>
+          
+          <a href="galeria.html" class="menu-links-rodape">Galeria</a>
+          <i class="fa-solid fa-circle"></i>
+
+          <a href="#servicos" class="menu-links-rodape">
+          Serviços 
+          </a>
+          <i class="fa-solid fa-circle"></i>
+
+          <a href="orcamento.html" class="menu-links-rodape">
+          Orçamento 
+          </a>
+          <i class="fa-solid fa-circle"></i>
+
+          <a href="#contato" class="menu-links-rodape">
+          Contato
+          </a>
+        </div>
+
+        <p class="telefone-rodape">Telefone <span>(11) 99874-7925</span></p>
+      </div>
+
+      <div class="como-chegar">
+        <p class="titulos-rodape">Como chegar</p>
+        <a target="_blank" href="https://www.google.com.br/maps/place/Recanto+L%C3%ADrio+dos+Vales/@-23.7246507,-46.6367671,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce4434a6c7435f:0xdeb20e180a342531!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="fa-solid fa-location-dot"></a>
+
+        <a target="_blank" href="https://www.google.com.br/maps/dir//Recanto+L%C3%ADrio+dos+Vales,+Pr+Vermelha+-+Estr.+Nova+Ip%C3%AA,+1028+-+Eldorado,+Diadema+-+SP,+09971-580/@-23.7246556,-46.6367617,17z/data=!4m17!1m7!3m6!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2sRecanto+L%C3%ADrio+dos+Vales!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df!4m8!1m0!1m5!1m1!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2m2!1d-46.6341787!2d-23.7246615!3e3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="botao-rota">Traçar Rota</a>
+
+      </div>
+
+      <div class="redes-rodape">
+        <p class="titulos-rodape">Siga em nossas Redes</p>
+        <div class="redes-sociais-rodape">
+          <a target="_blank" href="https://www.instagram.com/recantoliriodosvales_/" class="fa-brands fa-instagram"></a>
+          <a target="_blank" href="https://www.facebook.com/liriodosvalesrecanto?locale=pt_BR" class="fa-brands fa-facebook-f"></a>
+        </div>
+      </div>
+
+      <div class="premiacoes">
+        <img src="assets/img/Premiações.png" />
+      </div>
+      </div>
+  </div>
+  <div class="rodape-final">
+    © 2025 . Recanto Lírio dos Vales . Todos os direitos reservados.
+  </div>
+</footer>
+
+</html>
+

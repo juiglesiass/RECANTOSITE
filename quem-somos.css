@@ -1,0 +1,610 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: #333;
+  background-color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* === HEADER COM TRANSIÇÃO === */
+.site-header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2s ease, backdrop-filter 2s ease;
+  backdrop-filter: blur(3px);
+  background-color: rgba(51, 33, 44, 0);
+}
+
+.site-header.scrolled {
+  background-color: rgba(51, 33, 44, 1);
+  backdrop-filter: none;
+}
+
+.site-header .container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 90px;
+}
+
+.site-name {
+  font-size: 20px;
+  color: #FFCB6E;
+  font-weight: 400;
+}
+
+/* === NAVEGAÇÃO COM HOVER SUAVE E BRILHO === */
+.navigation {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pill {
+  padding: 8px;
+  height: 36px;
+  font-size: 20px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none;
+  transition: 
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.nav-pill:hover {
+  color: #f6ac52;
+  transform: scale(1.08);
+  text-shadow: 0 0 2px #FFD580, 0 0 15px #FFD580;
+}
+
+/* === SEÇÃO NOSSA MISSÃO === */
+.nossa-missao {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0px;
+  background: 
+    linear-gradient(rgba(51, 33, 44, 0.7), rgba(33, 21, 28, 0.7)),
+    url('assets/img/nossa_missao.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 5px solid #BA8C54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fundo-missao {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.lirio-missao {
+  width: 80%;
+  max-width: 1200px;
+  height: auto;
+  opacity: 0.3;
+}
+
+.conteudo-missao {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.titulo-missao {
+  font-family: 'Great Vibes', cursive;
+  font-size: 95px;
+  color: #BA8C54;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.texto-missao {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.paragrafo-missao {
+  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* === SEÇÃO NOSSO COMPROMISSO === */
+.nosso-compromisso {
+  background: linear-gradient(180deg, #ECE3DA 0%, #FFE4BD 86.01%);
+  padding: 80px 0;
+}
+
+.container-compromisso {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titulo-compromisso {
+  font-family: 'Great Vibes', cursive;
+  font-size: 72px;
+  color: #33212C;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.conteudo-compromisso {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.texto-compromisso {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #33212C;
+}
+
+.texto-compromisso p {
+  margin-bottom: 20px;
+}
+
+.redes-sociais-compromisso {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rede-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: rgba(51, 33, 44, 0.1);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #33212C;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.rede-social:hover {
+  background: #33212C;
+  color: #FFCB6E;
+  border-color: #BA8C54;
+  transform: translateY(-2px);
+}
+
+.rede-social i {
+  font-size: 24px;
+  color: #BA8C54;
+}
+
+/* === SEÇÃO RECONHECIMENTO === */
+.reconhecimento {
+  background: linear-gradient(180deg, #33212C 0%, #21151C 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container-reconhecimento {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titulo-reconhecimento {
+  font-family: 'Great Vibes', cursive;
+  font-size: 72px;
+  color: #BA8C54;
+  margin-bottom: 30px;
+}
+
+.texto-reconhecimento {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.premiacoes-reconhecimento img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === RODAPÉ === */
+.rodape {
+  position: relative;
+  width: 100%;
+  height: 287px;
+}
+
+.fundo-rodape{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.flores-rodape {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+}
+
+.conteudo-rodape {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(103.74deg, #21151C 52.99%, #875673 115.37%);
+  border-bottom: 2px solid #FFCB6E;
+}
+
+.logo-rodape {
+  height: 200px;
+  width: 100%;
+}
+
+.img-logo-rodape {
+  padding: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.info-rodape {
+  position: absolute;
+  left: 170px;
+  bottom: 60px;
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.info-rodape .titulo-rodape {
+  font-size: 24px;
+  color: #FFCB6E;
+}
+
+.info-rodape .subtitulo-rodape {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.linha-rodape {
+  width: 247px;
+  border: 1px solid #FFCB6E;
+  margin: 8px 0;
+}
+
+.menu-titulo-rodape {
+  color: #FFCB6E;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-links-rodape {
+  text-decoration: underline;
+  text-decoration-color:#FFCB6E;
+  font-size: 16px;
+  margin-top: 2px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.menu-links-rodape:hover{
+  color: #BA8C54;
+}
+
+.lista-menu-links-rodape {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-circle{
+  font-size: 3px;
+  padding: 13px;
+}
+
+.telefone-rodape {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0px;
+  text-decoration: underline;
+  text-decoration-color: #BA8C54;
+  text-underline-offset: 3px;
+  font-family: "Cormorant Infant", sans-serif;
+}
+
+.telefone-rodape span {
+  color: #BA8C54;
+}
+
+.como-chegar {
+  position: absolute;
+  bottom: 170px;
+  right: 385px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.titulos-rodape {
+  font-size: 25px;
+  margin: 0;
+}
+
+.botao-rota {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 92px;
+  height: 35px;
+  border: 1.5px solid #BA8C54;
+  border-radius: 76px;
+  background: transparent;
+  color: #BA8C54;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.botao-rota:hover{
+  color: #33212C;
+  background-color: #FFCB6E;
+}
+
+.redes-rodape {
+  position: absolute;
+  bottom: 175px;
+  right: 70px;
+  color: #FFCB6E;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.redes-sociais-rodape {
+  display: flex;
+  flex-direction: initial;
+  gap: 20px;
+}
+
+.fa-instagram, .fa-facebook-f, .fa-location-dot{
+  font-size: 20px;
+  color: #FFCB6E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-instagram:hover, .fa-facebook-f:hover, .fa-location-dot:hover{
+  color: #FFFFFF;
+}
+
+.premiacoes {
+  position: absolute;
+  bottom: 60px;
+  right: 15px;
+}
+
+.premiacoes img {
+  width: 500px;
+  height: 54.8px;
+}
+
+.rodape-final {
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(90deg, #21151C 24.13%, #33212C 100%);
+  font-family: 'Cormorant Infant', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFCB6E;
+  text-align: center;
+  line-height: 90px;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .titulo-missao {
+    font-size: 60px;
+  }
+  
+  .titulo-compromisso,
+  .titulo-reconhecimento {
+    font-size: 48px;
+  }
+  
+  .conteudo-compromisso {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .navigation {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .nav-pill {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
+
+/* === RESPONSIVIDADE MOBILE PARA QUEM SOMOS === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  
+  .hero-text {
+    font-size: 16px;
+    max-width: 90%;
+  }
+  
+  .missao-section {
+    padding: 40px 15px;
+  }
+  
+  .missao-content {
+    max-width: 100%;
+  }
+  
+  .missao-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  
+  .missao-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .compromisso-section {
+    padding: 40px 15px;
+  }
+  
+  .compromisso-content {
+    max-width: 100%;
+  }
+  
+  .compromisso-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .compromisso-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .social-links {
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .reconhecimento-section {
+    padding: 40px 15px;
+  }
+  
+  .reconhecimento-content {
+    max-width: 100%;
+  }
+  
+  .reconhecimento-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  
+  .reconhecimento-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .premiacoes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .premio-item {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-text {
+    font-size: 14px;
+    max-width: 95%;
+  }
+  
+  .missao-section, .compromisso-section, .reconhecimento-section {
+    padding: 30px 10px;
+  }
+  
+  .missao-title, .compromisso-title, .reconhecimento-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .missao-text, .compromisso-text, .reconhecimento-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .social-links a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .premiacoes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+  }
+  
+  .premio-item {
+    width: 60px;
+    height: 45px;
+  }
+}
+

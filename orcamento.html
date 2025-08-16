@@ -5,62 +5,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solicite Seu Orçamento - Recanto Lírio dos Vales</title>
   <link rel="stylesheet" href="css/orcamento.css" />
+  <link rel="stylesheet" href="css/header.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=El+Messiri:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- Icones Rodape -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- Cabeçalho -->
-  <header class="header">
-    <div class="logo">
-      <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo Recanto" />
-      <span>Recanto Lírio dos Vales</span>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo-area">
+        <a href="index.html"><img src="assets/img/Logo_recanto-sem-fundo.png" class="logo"></a>
+        <span class="site-name">Recanto Lírio dos Vales</span>
+      </div>
+      <nav class="navigation">
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="quem-somos.html" class="nav-pill">Quem somos</a></li>
+          <li><a href="espaco.html" class="nav-pill">Espaço</a></li>
+          <li><a href="galeria.html" class="nav-pill">Galeria</a></li>
+          <li><a href="#servicos" class="nav-pill">Serviços</a></li>
+          <li><a href="orcamento.html" class="nav-pill">Orçamento</a></li>
+          <li><a href="#contato" class="nav-pill">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav-menu">
-      <a href="index.html">Quem somos</a>
-      <a href="espaco.html">Espaço</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="orcamento.html" class="ativo">Orçamento</a>
-      <a href="contato.html">Contato</a>
-    </nav>
+    
+    <!-- Menu Mobile Lateral -->
+    <div class="mobile-menu-overlay">
+      <div class="mobile-menu">
+        <div class="mobile-menu-header">
+          <img src="assets/img/Logo_recanto-sem-fundo.png" alt="Logo" class="mobile-logo">
+          <button class="mobile-menu-close">&times;</button>
+        </div>
+        <nav class="mobile-nav">
+          <a href="quem-somos.html" class="mobile-nav-link">Quem somos</a>
+          <a href="espaco.html" class="mobile-nav-link">Espaço</a>
+          <a href="galeria.html" class="mobile-nav-link">Galeria</a>
+          <a href="#servicos" class="mobile-nav-link">Serviços</a>
+          <a href="orcamento.html" class="mobile-nav-link">Orçamento</a>
+          <a href="#contato" class="mobile-nav-link">Contato</a>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <!-- Conteúdo -->
-  <main class="container1">
-    <h1 class="titulo">Entre em contato</h1>
-    <p class="subtitulo">Para mais informações sobre nossos pacotes de casamento, disponibilidade de datas ou agendar uma visita ao Recanto Lírio dos Vales, por favor, preencha o formulário abaixo.</p>
+  <!-- Seção Principal -->
+  <section class="orcamento-hero">
+    <div class="orcamento-background">
+      <img src="assets/img/lirio desenho.png" alt="Lírio decorativo" class="lirio-orcamento">
+    </div>
+    <div class="orcamento-content">
+      <h1 class="orcamento-titulo">Entre em contato</h1>
+      <p class="orcamento-subtitulo">
+        Para mais informações sobre nossos pacotes de casamento, disponibilidade de datas ou agendar uma visita ao Recanto Lírio dos Vales, por favor, preencha o formulário abaixo.
+      </p>
+    </div>
+  </section>
 
-    <form class="contact_form" method="post" action="https://app4.meeventos.com.br/recantoliriodosvalesabcsp/?x=7&c=d42a107ec3390466d656c4080acb89522022020808190000008&tipo=formorc">
-      <label>Nome*<input type="text" name="fnome" required maxlength="200" /></label>
-      <label>E-mail*<input type="email" name="femail" required maxlength="200" /></label>
-      <label>Celular<input type="tel" name="fcelular" maxlength="15" /></label>
-      <label>Data do Evento<input type="date" name="fdata" maxlength="15" /></label>
-      <label>Tipo do Evento
-        <select name="ftipo">
-          <option value="1">Casamento</option>
-          <option value="2">Debutante</option>
-          <option value="10">Outros</option>
-        </select>
-      </label>
-      <label>Como nos conheceu?<input type="text" name="fconheceu" maxlength="100" /></label>
-      <label>N° de Convidados<input type="number" name="fconvidados" maxlength="100" /></label>
-      <fieldset>
-        <legend>Como gostaria de receber nosso orçamento?</legend>
-        <label><input type="radio" name="fcomo" value="E-mail" checked /> E-mail</label>
-        <label><input type="radio" name="fcomo" value="WhatsApp" /> WhatsApp</label>
-        <label><input type="radio" name="fcomo" value="Telefone" /> Telefone</label>
-      </fieldset>
-      <label>Mensagem<textarea name="fmsg"></textarea></label>
-      <button type="submit">Enviar</button>
-    </form>
-  </main>
+  <!-- Formulário de Orçamento -->
+  <section class="formulario-section">
+    <div class="formulario-container">
+      <div class="formulario-card">
+        <h2 class="formulario-titulo">Solicite um orçamento</h2>
+        
+        <form class="contact_form" method="post" action="https://app4.meeventos.com.br/recantoliriodosvalesabcsp/?x=7&c=d42a107ec3390466d656c4080acb89522022020808190000008&tipo=formorc">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fnome">Nome*</label>
+              <input type="text" id="fnome" name="fnome" required maxlength="200" placeholder="Seu nome completo" />
+            </div>
+            <div class="form-group">
+              <label for="ftipo">Tipo do Evento*</label>
+              <select id="ftipo" name="ftipo" required>
+                <option value="">Selecione o tipo</option>
+                <option value="1">Casamento</option>
+                <option value="2">Debutante</option>
+                <option value="10">Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="femail">E-mail*</label>
+              <input type="email" id="femail" name="femail" required maxlength="200" placeholder="seu@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="fconheceu">Como nos conheceu</label>
+              <select id="fconheceu" name="fconheceu">
+                <option value="">Selecione uma opção</option>
+                <option value="Google">Google</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Indicação">Indicação</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fcelular">Telefone*</label>
+              <input type="tel" id="fcelular" name="fcelular" required maxlength="15" placeholder="(11) 99999-9999" />
+            </div>
+            <div class="form-group">
+              <label for="fconvidados">N° de Convidados*</label>
+              <input type="number" id="fconvidados" name="fconvidados" required maxlength="100" placeholder="Número de convidados" />
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="fmsg">Mensagem*</label>
+            <textarea id="fmsg" name="fmsg" required placeholder="Nos conte mais sobre seu evento..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Enviar Solicitação</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- Rodapé -->
-  <footer class="footer">
-    <p>© 2025 . Recanto Lírio dos Vales . Todos os direitos reservados.</p>
+  <footer class="rodape">
+    <div class="fundo-rodape"> 
+      <img class="flores-rodape" src="assets/img/lirio-rodape.png" alt="Fundo Floral">
+      <div class="conteudo-rodape">
+        <div class="logo-rodape">
+        <a href="index.html"><img src="assets/img/Logo_rodape.png" class="img-logo-rodape"></a>
+        </div>
+        <div class="info-rodape">
+          <h2 class="titulo-rodape">Recanto Lírio do Vales</h2>
+          <p class="subtitulo-rodape">Espaço para Casamentos e Debutantes</p>
+          <hr class="linha-rodape" />
+          <p class="menu-titulo-rodape">Menu</p>
+
+          <div class="lista-menu-links-rodape">
+            <a href="quem-somos.html" class="menu-links-rodape">
+            Quem somos
+            </a>
+            <i class="fa-solid fa-circle"></i>
+
+            <a href="espaco.html" class="menu-links-rodape">Espaço</a>
+            <i class="fa-solid fa-circle"></i>
+            
+            <a href="galeria.html" class="menu-links-rodape">Galeria</a>
+            <i class="fa-solid fa-circle"></i>
+
+            <a href="#servicos" class="menu-links-rodape">
+            Serviços 
+            </a>
+            <i class="fa-solid fa-circle"></i>
+
+            <a href="orcamento.html" class="menu-links-rodape">
+            Orçamento 
+            </a>
+            <i class="fa-solid fa-circle"></i>
+
+            <a href="#contato" class="menu-links-rodape">
+            Contato
+            </a>
+          </div>
+
+          <p class="telefone-rodape">Telefone <span>(11) 99874-7925</span></p>
+        </div>
+
+        <div class="como-chegar">
+          <p class="titulos-rodape">Como chegar</p>
+          <a target="_blank" href="https://www.google.com.br/maps/place/Recanto+L%C3%ADrio+dos+Vales/@-23.7246507,-46.6367671,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce4434a6c7435f:0xdeb20e180a342531!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="fa-solid fa-location-dot"></a>
+
+          <a target="_blank" href="https://www.google.com.br/maps/dir//Recanto+L%C3%ADrio+dos+Vales,+Pr+Vermelha+-+Estr.+Nova+Ip%C3%AA,+1028+-+Eldorado,+Diadema+-+SP,+09971-580/@-23.7246556,-46.6367617,17z/data=!4m17!1m7!3m6!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2sRecanto+L%C3%ADrio+dos+Vales!8m2!3d-23.7246556!4d-46.6341868!16s%2Fg%2F11b6lfc7df!4m8!1m0!1m5!1m1!1s0x94ce4434a6c7435f:0xdeb20e180a342531!2m2!1d-46.6341787!2d-23.7246615!3e3?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" class="botao-rota">Traçar Rota</a>
+
+        </div>
+
+        <div class="redes-rodape">
+          <p class="titulos-rodape">Siga em nossas Redes</p>
+          <div class="redes-sociais-rodape">
+            <a target="_blank" href="https://www.instagram.com/recantoliriodosvales_/" class="fa-brands fa-instagram"></a>
+            <a target="_blank" href="https://www.facebook.com/liriodosvalesrecanto?locale=pt_BR" class="fa-brands fa-facebook-f"></a>
+          </div>
+        </div>
+
+        <div class="premiacoes">
+          <img src="assets/img/Premiações.png" />
+        </div>
+        </div>
+    </div>
+    <div class="rodape-final">
+      © 2025 . Recanto Lírio dos Vales . Todos os direitos reservados.
+    </div>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    // Rolagem suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Header transparente
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector(".site-header");
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
   <script src="orcamento.js"></script>
+  <script src="mobile-menu.js"></script>
 </body>
 </html>
