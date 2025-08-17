@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 body {
@@ -94,7 +95,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 5px solid #BA8C54;
+  border-bottom: 3px solid #BA8C54;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,43 +215,157 @@ body {
 
 /* === SEÇÃO RECONHECIMENTO === */
 .reconhecimento {
-  background: linear-gradient(180deg, #33212C 0%, #21151C 100%);
   padding: 80px 0;
   text-align: center;
+  height: 800px;
+  align-content: center;
+}
+
+.lirio-esquerdo-reconhecimento {
+  background-image: url(assets/img/dourado-esquerdo-reconhecimento2.svg), linear-gradient(90deg, #33212c 30%, #0f090d 100%);
+  background-size: cover;
+  left: 0;
+  position: absolute;
+  bottom: -1402px;
+  z-index: 1;
+  height: 799px;
+  width: 50%;
+  background-color: #120A0F;
+  border-top: 3px solid #BA8C54;
+  border-bottom: 3px solid #BA8C54;
+}
+
+.lirio-direito-reconhecimento {
+  background-image: linear-gradient(270deg, #21151ce1 10%,  #ece3daf8 100%), url(assets/img/dourado-esquerdo-reconhecimento2.svg);
+  background-size: cover;
+  right: 0;
+  position: absolute;
+  bottom: -1402px;
+  z-index: 1;
+  height: 799px;
+  width: 50%;
+  background-color: #21151c;
+  border-top: 3px solid #BA8C54;
+  border-bottom: 3px solid #BA8C54;
 }
 
 .container-reconhecimento {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-image: linear-gradient(180deg, #21151c00 1%, #21151c 75%), url(assets/img/galeria/fundo-reconhecimento.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 85%;
+  height: 90%;
+  margin: auto;
+  align-content: center;
+  z-index: 2;
+  position: relative;
+  padding-top: 120px;
 }
 
 .titulo-reconhecimento {
-  font-family: 'Great Vibes', cursive;
-  font-size: 72px;
-  color: #BA8C54;
-  margin-bottom: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 82px;
+  color: #ffffff;
+  margin-bottom: -30px;
 }
 
 .texto-reconhecimento {
   font-size: 18px;
   color: #FFFFFF;
-  margin-bottom: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 700px;
+  margin: 20px auto 100px;
 }
 
 .premiacoes-reconhecimento img {
-  max-width: 100%;
+  width: 100px;
   height: auto;
+  margin-bottom: 0px;
+  margin-left: 15px;
 }
+
+/* ==== Responsividade Reconhecimento ==== */
+
+@media (max-width: 500px) {
+
+
+
+}
+
+
+@media (max-width: 1200px) {
+  .lirio-direito-reconhecimento {
+    display: none;
+  }
+
+  .reconhecimento {
+    margin-top: 0px;
+    padding: 0px 0;
+    text-align: center;
+    height: 600px;
+    align-content: center;
+    position: relative;
+}
+
+.lirio-esquerdo-reconhecimento {
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+}
+
+.container-reconhecimento {
+  padding: 0px;
+  margin: 0 auto;
+  max-width: 85%;
+  max-height: 80%;
+  text-align: center;
+  position: relative;
+}
+
+}
+
+@media (max-width: 1000px) {
+  .container-reconhecimento h2{
+  font-size: 32px;
+  text-align: center;
+}
+
+.titulo-reconhecimento {
+  margin-top: -20px;
+  padding-bottom: 20px;
+}
+
+.texto-reconhecimento {
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  max-width: 250px;
+  margin: 20px auto 30px;
+}
+
+.premiacoes-reconhecimento img {
+  width: 50px;
+  margin-left: 5px;
+}
+
+.premiacoes-reconhecimento {
+  max-width: 250px;
+  margin: auto;
+}
+}
+
+
+
 
 /* === RODAPÉ === */
 .rodape {
   position: relative;
   width: 100%;
   height: 287px;
+  top: 0;
 }
 
 .fundo-rodape{
