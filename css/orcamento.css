@@ -95,20 +95,21 @@ body {
 
 /* === SEÇÃO HERO ORÇAMENTO === */
 .orcamento-hero {
-  top: -90px;
+  padding-top: 100px;
   position: relative;
   width: 100%;
-  height: 60vh;
-  margin-top: 90px;
-  background: linear-gradient(93.84deg, #33212C 30.05%, #21151C 74.41%);
-  border-bottom: 5px solid #BA8C54;
+  background: url(../assets/img/lirio\ desenho-orc.png), conic-gradient(from 180deg at 50% 50%, #21151C, #ECE3DA);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
+  gap: 30px;
 }
 
 .orcamento-background {
-  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
@@ -117,62 +118,62 @@ body {
   z-index: 1;
 }
 
-.lirio-orcamento {
-  width: 80%;
-  max-width: 1000px;
-  height: auto;
-  opacity: 0.3;
-}
-
 .orcamento-content {
   position: relative;
   z-index: 2;
   text-align: center;
   max-width: 800px;
-  padding: 0 20px;
+  align-items: center;
+}
+
+.logo-orc {
+  max-width: 127px;
+  height: auto;
 }
 
 .orcamento-titulo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 80px;
-  color: #BA8C54;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  min-width: 790px;
+  font-family: 'Cormorant SC';
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 70px;
+  background: linear-gradient(90deg, #FFECCB 0%, #FFE4BD 26%, #FFFFFF 50%, #FFE4BD 75%, #FFECCB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .orcamento-subtitulo {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.5;
   font-family: 'Cormorant Garamond', serif;
+  max-width: 500px;
+  margin: auto;
 }
 
 /* === SEÇÃO FORMULÁRIO === */
 .formulario-section {
-  background: linear-gradient(180deg, #ECE3DA 0%, #FFE4BD 86.01%);
-  padding: 80px 0;
-  min-height: 100vh;
-}
-
-.formulario-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-image: url(../assets/img/background_opc.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  margin-bottom: 100px;
 }
 
 .formulario-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
+  background: #EBE2D9;
   padding: 50px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  max-width: 700px;
+  margin: 150px auto 0;
 }
 
 .formulario-titulo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 48px;
+  font-family: 'El Messiri', cursive;
+  font-size: 30px;
   color: #33212C;
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 
@@ -199,7 +200,7 @@ body {
 }
 
 .form-group label {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'El Messiri', serif;
   font-size: 18px;
   font-weight: 600;
   color: #33212C;
@@ -209,13 +210,17 @@ body {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 15px;
-  border: 2px solid #E0D5CC;
-  border-radius: 10px;
+  border: none;
+  background-color: transparent;
   font-size: 16px;
-  font-family: 'Cormorant Garamond', serif;
-  background: #FFFFFF;
+  font-family: 'El Messiri', serif;
   transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border-bottom: 2px solid black;
 }
 
 .form-group input:focus,
@@ -232,24 +237,31 @@ body {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #999;
+.form-group textarea::placeholder,
+.placeholder {
+  color: #BA8C54;
   font-style: italic;
 }
+
+
 
 /* === BOTÃO DE ENVIO === */
 .submit-btn {
   background: linear-gradient(135deg, #BA8C54 0%, #A67A47 100%);
   color: #FFFFFF;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 18px 40px;
+  padding: 14px 40px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: center;
+  display: flex;
+  justify-content: flex-start;
+  width: 220px;
+  height: 50px;
+  text-align: center;
   margin-top: 20px;
   box-shadow: 0 5px 15px rgba(186, 140, 84, 0.3);
 }
@@ -726,37 +738,49 @@ body {
 
 /* === RESPONSIVIDADE MOBILE PARA ORÇAMENTO === */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 60vh;
-    min-height: 400px;
-    background-attachment: scroll;
-  }
   
-  .hero-content {
-    padding: 0 15px;
+  .formulario-card{
+    margin: 50px auto 0;
   }
-  
-  .hero-title {
-    font-size: 48px;
+
+  .submit-btn{
+    width: 150px;
+    height: 40px;
+  }
+
+  .orcamento-hero {
+    background: #21151C;
+    height: auto;
+  }
+
+  .orcamento-titulo {
+    font-size: 25px;
+    font-weight: 600;
     line-height: 1.1;
+    top: 20px;
+    margin-top: 15px;
   }
-  
-  .hero-text {
+
+  .orcamento-subtitulo {
     font-size: 16px;
-    max-width: 90%;
+    max-width: 300px;
+    margin-top: 15px;
+    color: #FFCB6E;
   }
   
-  .form-section {
-    padding: 40px 15px;
+  .formulario-section {
+    margin-top: 0;
+    padding: 20px;
   }
-  
-  .form-container {
+
+  .formulario-container {
     max-width: 100%;
-    padding: 30px 20px;
+    padding: 0;
+    top: 0;
   }
-  
-  .form-title {
-    font-size: 36px;
+
+  .formulario-titulo {
+    font-size: 20px;
     margin-bottom: 20px;
   }
   
