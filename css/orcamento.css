@@ -811,6 +811,7 @@ body {
   .hero-section {
     height: 100vh;
     min-height: 350px;
+    padding: 0 25px;
   }
   
   .hero-title {
