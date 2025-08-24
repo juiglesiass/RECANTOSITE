@@ -117,8 +117,9 @@ body {
 
 .lirio-momentos{ 
   position: relative;
-  width: 1500px;
-  height: 210px;
+  background-size: cover;
+  max-width: auto;
+  height: 100%;
   top: 90px;
 }
 
@@ -130,9 +131,8 @@ body {
 }
 
 .titulo-momentos {
-  width: 647px;
-  height: 72px;
-  top: 140px;
+  max-width: 100%;
+  height: auto;
   font-family: 'Great Vibes', cursive;
   font-style: normal;
   font-weight: 400;
@@ -140,13 +140,16 @@ body {
   line-height: 125.02%;
   color: #BA8C54;
   text-align: center;
-  margin-top: -85px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .descricao-momentos {
-  width: 733px;
+  max-width: 733px;
   height: 40px;
-  top: 245px;
+  top: 55px;
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -154,7 +157,10 @@ body {
   line-height: 125.02%;
   text-align: center;
   color: #FFFFFF;
-  margin-top: 35px;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Espaco Bege */
@@ -568,13 +574,31 @@ body {
   .premiacoes img {
     width: 400px;
   }
-}
 
-/* Ajustes para mobile pequeno no footer mobile */
-@media (max-width: 480px) {
   .titulo-momentos {
     font-size: 45px;
   }
+}
+
+/* Ajustes para mobile pequeno no footer mobile */
+@media screen and (max-width: 1200px) {
+
+  .textos-momentos-especiais{
+    max-width: 100%;
+  }
+
+  .titulo-momentos {
+    font-size: 50px;
+    width: 90%;
+  }
+
+  .descricao-momentos {
+    top: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+
 
   .descricao-momentos {
     font-size: 14px;
