@@ -62,14 +62,14 @@
     padding: 40px 15px;
   }
   
-  .gastronomia-nova-content {
+  .gastronomia-nova-content { 
     max-width: 100%;
   }
   
   .talheres-icon {
     width: 80px;
     margin-bottom: -15px;
-    margin-top: -20px;
+    margin-top: -20px;  
   }
   
   .gastronomia-nova-title {
