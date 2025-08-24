@@ -450,7 +450,7 @@ body {
 /* === FOOTER MOBILE === */
 .rodape-mobile {
   display: none;
-  background: linear-gradient(103.74deg, #21151C 52.99%, #875673 115.37%);
+  background: linear-gradient(50deg, #21151C 52.99%, #875673 115.37%);
   color: white;
   font-family: 'Cormorant Garamond', serif;
   padding: 40px 20px 0;
@@ -579,7 +579,6 @@ body {
 .rodape-mobile-final {
   margin-top: 30px;
   padding: 20px;
-  background: linear-gradient(90deg, #21151C 24.13%, #33212C 100%);
   font-family: 'Cormorant Infant', serif;
   font-style: italic;
   font-weight: 700;
