@@ -222,8 +222,8 @@ body {
     }
 
     .swiper-slide {
+      background-size: cover;
       object-fit: cover;
-      display: block;
       height: 100%;
       width: auto;
     }
