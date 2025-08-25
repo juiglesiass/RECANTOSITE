@@ -132,7 +132,6 @@ body {
 }
 
 .orcamento-titulo {
-  min-width: 790px;
   font-family: 'Cormorant SC';
   text-transform: uppercase;
   font-weight: 200;
@@ -751,6 +750,11 @@ body {
   .orcamento-hero {
     background: #21151C;
     height: auto;
+    max-width: 100%;
+  }
+
+  .orcamento-content {
+   max-width: 100%;
   }
 
   .orcamento-titulo {
@@ -759,6 +763,7 @@ body {
     line-height: 1.1;
     top: 20px;
     margin-top: 15px;
+    max-width: 100%;
   }
 
   .orcamento-subtitulo {
