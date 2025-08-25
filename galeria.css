@@ -544,6 +544,9 @@ body {
   .rodape-mobile {
     display: block;
   }
+  .lirio-momentos {
+    display: none;
+  }
 }
 
 /* Esconde footer desktop a partir de 575px */
