@@ -8,6 +8,7 @@ const swiper = new Swiper('.swiper', {
   freeMode: true,
   speed:7000,
   slidesPerView:"auto",
+ 
   autoplay: {
         delay: 0,
   },
@@ -23,4 +24,6 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
+  
 });

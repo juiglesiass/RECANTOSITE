@@ -848,9 +848,10 @@ body {
   }
   
   .submit-btn {
-    font-size: 14px;
+    font-size: 13.4px;
     padding: 10px 25px;
     margin-top: 15px;
+    align-items: center;    
   }
 }
 

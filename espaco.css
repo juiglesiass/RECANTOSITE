@@ -224,8 +224,8 @@ body {
     .swiper-slide {
       background-size: cover;
       object-fit: cover;
-      height: 100%;
-      width: auto;
+      max-width: 500px;
+      min-width: auto;
     }
 
     .texto-intro1, .texto-intro2{
